@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.door {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+.left {
+    left: 0;
+    transform-origin: right center;
+}
+
+.right {
+    right: 0;
+    transform-origin: left center;
+}
+
+.door img {
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in-out;
+}
+
+.open .left {
+    transform: translateX(-100%) scale(1.5);
+}
+
+.open .right {
+    transform: translateX(100%) scale(1.5);
+}
+
+#nav-toggle {
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    bottom: 40%;
+    transform: translate(-50%, 25%);
+    background: linear-gradient(45deg, #FFD700, #b8860b, #DAA520);
+    border: none;
+    border-radius: 5rem;
+    outline: none;
+    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+    cursor: pointer;
+    transition: transform, background-color;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+}
+
+#nav-toggle:hover {
+    transform: translateX(-50%) scale(1.04);
+}
+
+#nav-toggle:active {
+    transform: translateX(-50%) scale(0.96);
+}
+
+#nav-toggle.open {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+#nav-toggle>p {
+    opacity: 0;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Brush Script MT', cursive;
+}
+
+#nav-toggle:hover>p {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.flag-string {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+    transition: transform 0.5s ease-out;
+}
+
+.flag-string.risen {
+    animation: rise 1s ease-in-out forwards;
+}
+
+.string {
+    position: absolute;
+    width: 100vw;
+    height: 3px;
+    background-color: #F7F7F7;
+    top: 50%;
+    left: 0;
+}
+
+.flag-item {
+    width: 50px;
+    height: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+    background: linear-gradient(45deg, #FFD700, #b8860b, #DAA520);
+    position: relative;
+    z-index: 9;
+    animation: sway 3s ease-in-out infinite;
+    transform-origin: top center;
+    background-color: #FFD700;
+    /* Fallback color */
+    background: linear-gradient(45deg, #FFD700, #b8860b, #DAA520);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    margin-top: 50px;
+    /* Added this line to align with string bottom */
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-600%);
+    }
+}
