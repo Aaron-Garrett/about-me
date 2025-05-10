@@ -1,147 +1,303 @@
-/* CSS File (styles.css) */
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
 }
 
-.preview-container {
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
+.door {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
 }
 
-.preview-iframe {
-    width: 25%;
-    height: 500px;
-    border: none;
+.left {
+  left: 0;
+  transform-origin: right center;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0px;
-    background-color: black;
+.right {
+  right: 0;
+  transform-origin: left center;
+}
+
+.door img {
+  width: 100%;
+  height: auto;
+  transition: all 1s ease-in-out;
+}
+
+.open .left {
+  transform: translateX(-100%) scale(1.5);
+}
+
+.open .right {
+  transform: translateX(100%) scale(1.5);
+}
+
+#nav-toggle {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  bottom: 40%;
+  transform: translate(-50%, 25%);
+  background: linear-gradient(45deg, #FFD700, #b8860b, #DAA520);
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+
+#nav-toggle:hover {
+  transform: translateX(-50%) scale(1.04);
+}
+
+#nav-toggle:active {
+  transform: translateX(-50%) scale(0.96);
+}
+
+#nav-toggle.open {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+#nav-toggle>p {
+  opacity: 0;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Brush Script MT', cursive;
+}
+
+#nav-toggle:hover>p {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.flag-string {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+  transition: transform 0.5s ease-out;
+}
+
+.flag-string.risen {
+  animation: rise 1s ease-in-out forwards;
+}
+
+.string {
+  position: absolute;
+  width: 100vw;
+  height: 3px;
+  background-color: #F7F7F7;
+  top: 50%;
+  left: 0;
+}
+
+.flag-item {
+  width: 50px;
+  height: 60px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+  background: linear-gradient(45deg, #FFD700, #b8860b, #DAA520);
+  position: relative;
+  z-index: 9;
+  animation: sway 3s ease-in-out infinite;
+  transform-origin: top center;
+  background-color: #FFD700;
+  /* Fallback color */
+  background: linear-gradient(45deg, #FFD700, #b8860b, #DAA520);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 50px;
+  /* Added this line to align with string bottom */
+}
+
+@keyframes sway {
+
+  0%,
+  100% {
+      transform: rotate(0deg);
   }
-  
-  .rubik-font {
-    font-family: "Rubik", sans-serif;
+
+  50% {
+      transform: rotate(5deg);
   }
-  
-  main {
-    /* background-image: url("https://images.unsplash.com/photo-1666032234128-abc3e45bd1dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"); */
-    background-image: url(../img/DSC_0137_1.jpg);
-    background-position: center 0%;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    z-index: 2;
-    transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+}
+
+@keyframes rise {
+  0% {
+      transform: translateY(0);
   }
-  
-  body[data-nav="true"] > main {
-    transform: translateY(-50%);
+
+  100% {
+      transform: translateY(-600%);
   }
-  
-  nav {
-    height: 50vh;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    z-index: 1;
-    overflow: hidden;
+}
+
+/* Modify the homepage class */
+.homepage {
+  display: grid;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  grid-template-areas:
+      "box-1 box-2 box-2"
+      "box-1 box-3 box-4";
+  z-index: 0;
+  background-color: gray;
+  width: 80%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+.homepage .box {
+  position: relative;
+  display: block;
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.homepage .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.homepage .box::after{
+  --angle: 0deg;
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(var(--angle), transparent 25%, #DAA520);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+  padding: 7px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+  opacity: 0;
+}
+
+.homepage .box:hover::after {
+  opacity: 1;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
   }
-  
-  #nav-links {  
-    display: flex;
-    gap: clamp(1rem, 2vw, 2rem);
-    margin-top: clamp(2rem, 2vw, 3rem);
-    padding: 0rem clamp(1rem, 2vw, 2rem);
-    transform: translateY(70%) scale(0.9);
-    transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
+  to {
+    --angle: 360deg;
   }
-  
-  body[data-nav="true"] > nav > #nav-links {
-    transform: translateY(0%) scale(1);
-  }
-  
-  #nav-links > .nav-link {
-    text-decoration: none;
-  }
-  
-  #nav-links > .nav-link > .nav-link-label {
-    color: white;
-    font-size: 1.25rem;
-    margin: 0rem;
-    text-transform: uppercase;
-  }
-  
-  #nav-links > .nav-link > .nav-link-image {
-    width: max(32vw, 400px);
-    aspect-ratio: 1.8 / 1;
-    border-radius: 0.5rem;
-    margin-top: 0.75rem;
-    object-fit: cover;
-  }
-  
-  #nav-toggle {
-    height: 5rem;
-    width: 5rem;
-    position: fixed;
-    z-index: 3;
-    left: 50%;
-    bottom: 3rem;
-    transform: translateX(-50%);
-    background-color: rgb(0, 0, 72);
-    border: none;
-    border-radius: 5rem;
-    outline: none;
-    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
-    cursor: pointer;
-    transition: transform, background-color;
-    transition-timing-function: ease;
-    transition-duration: 400ms;
-  }
-  
-  #nav-toggle:hover {
-    transform: translateX(-50%) scale(1.04);
-  }
-  
-  #nav-toggle:active {
-    transform: translateX(-50%) scale(0.96);
-  }
-  
-  body[data-nav="true"] > #nav-toggle {
-    background-color: rgb(47, 79, 47);
-  }
-  
-  body:not([data-nav="true"]) > #nav-toggle:hover > .open {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  
-  #nav-toggle > i {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    color: rgb(246, 231, 224);
-    font-size: 1.75rem;
-    opacity: 0;
-    transition: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 400ms;
-  }
-  
-  body[data-nav="true"] > #nav-toggle > .close {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
+}
+
+.homepage .box:hover {
+  transform: scale(1.1);  /* Optionally, scale the image when hovered */
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+#about-me::before {
+  content: "About Me";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+}
+
+#portfolio::before {
+  content: "My Portfolio";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+}
+
+#education::before {
+  content: "My Education";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+}
+
+#hobbies::before {
+  content: "My Hobbies";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+}
+
+#about-me:hover::before,
+#portfolio:hover::before,
+#education:hover::before,
+#hobbies:hover::before {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
+  background: rgba(0 0 0 / 65%);
+  transition: opacity 0.3s ease-in-out;
+}

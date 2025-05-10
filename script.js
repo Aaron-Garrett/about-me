@@ -1,3 +1,7 @@
 const toggleNav = () => {
-    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
-  }
+  setTimeout(() => {
+      document.body.classList.add('open');
+      document.querySelector('.flag-string').classList.add('risen');
+      document.querySelector('#nav-toggle').classList.add('open');
+  }, 500);
+};
