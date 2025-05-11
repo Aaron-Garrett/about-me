@@ -87,11 +87,11 @@ main {
 }
 
 .cube .right {
-    transform: rotateY(90deg) translateZ(56vh);
+    transform: rotateY(90deg) translateZ(28vh);
 }
 
 .cube .left {
-    transform: rotateY(-90deg) translateZ(56vh);
+    transform: rotateY(-90deg) translateZ(28vh);
 }
 
 .cube .top {
