@@ -120,7 +120,7 @@ main {
     
     .cube .front, .cube .back, .cube .right, 
     .cube .left, .cube .top, .cube .bottom {
-        transform: translateZ(45vw); /* Adjusted for new container size */
+        transform: translateZ(45vw) scale(0.5); /* Added scale to reduce size */
     }
     
     .controls {
