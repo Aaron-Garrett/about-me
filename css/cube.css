@@ -72,8 +72,8 @@ main {
 
 .cube .front  { transform: rotateY(0deg) translateZ(28vh); }
 .cube .back   { transform: rotateY(180deg) translateZ(28vh); }
-.cube .right  { transform: rotateY(90deg) translateZ(28vh); }
-.cube .left   { transform: rotateY(-90deg) translateZ(28vh); }
+.cube .right  { transform: rotateY(90deg) translateZ(56vh); }
+.cube .left   { transform: rotateY(-90deg) translateZ(56vh); }
 .cube .top    { transform: rotateX(90deg) translateZ(28vh); }
 .cube .bottom { transform: rotateX(-90deg) translateZ(28vh); }
 

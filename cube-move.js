@@ -19,8 +19,8 @@ function rotateLeft() {
     if (rotationX < 0) {
         rotationX += 360;
     }
-    const cube = document.getElementById('cube');
-    cube.style.transform = `translateZ(0) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    updateCubeRotation();
+
 }
 
 function rotateRight() {
@@ -41,8 +41,8 @@ function rotateRight() {
     if (rotationX < 0) {
         rotationX += 360;
     }
-    const cube = document.getElementById('cube');
-    cube.style.transform = `translateZ(0) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    updateCubeRotation();
+
 }
 
 function rotateUp() {
