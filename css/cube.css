@@ -219,28 +219,4 @@ main {
         padding: 0;
         /* Remove padding that was causing overflow */
     }
-
-    /* Add specific styling for the homepage grid */
-    .homepage {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    /* Update box styling */
-    .homepage .box {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .homepage .box img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
 }
