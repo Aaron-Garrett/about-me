@@ -3,8 +3,10 @@
 <head>
     <title>My Web Page</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/cube.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
     <script src="script.js"></script>
+    <script src="cube-move.js"></script>
 </head>
 
 <body>
@@ -33,58 +35,74 @@
                 <p>Open</p>
             </button>
         </div>
-        <div id="front">
-            <div class="homepage">
-                <div class="box" id="about-me" style="grid-area: box-1"><img src="./img/headshot.jpg" /><!-- About Me --></div>
-                <div class="box" id="portfolio" style="grid-area: box-2"><img src="./img/logos.png" /><!-- Portfolio --></div>
-                <div class="box" id="education" style="grid-area: box-3"><img src="./img/kelley.jpg" /><!-- Education --></div>
-                <div class="box" id="hobbies" style="grid-area: box-4"><img src="./img/Eagle_Carrying_Fish_Cropped.jpg" /> <!-- Hobbies --></div>
-            </div>
-        </div>
-        <div id="left">
-            <div class="about-me">
-                <p>
-                    1. Where I'm from
-                    2. What are my passions
-                    3. What are my goals
-                    4. What are my skills
-                    5. What are my interests
-                </p>
-            </div>
-        </div>
-        <div id="right">
-            <div class="hobbies">
-                <p>
-                    1. Hiking
-                    2. Fishing
-                    3. Photography
-                    4. Development
-                    5. Writing
-                    6. Reading
+        <div class="cube-container">
+            <div id="cube" class="cube">
+                <div class="face front">
+                    <div class="homepage">
+                        <div class="box" id="about-me" style="grid-area: box-1"><img
+                                src="./img/headshot.jpg" /><!-- About Me --></div>
+                        <div class="box" id="portfolio" style="grid-area: box-2"><img
+                                src="./img/logos.png" /><!-- Portfolio --></div>
+                        <div class="box" id="education" style="grid-area: box-3"><img
+                                src="./img/kelley.jpg" /><!-- Education --></div>
+                        <div class="box" id="hobbies" style="grid-area: box-4"><img
+                                src="./img/Eagle_Carrying_Fish_Cropped.jpg" /> <!-- Hobbies --></div>
+                    </div>
+                </div>
+                <div class="face left">
+                    <div class="about-me">
+                        <p>
+                            1. Where I'm from
+                            2. What are my passions
+                            3. What are my goals
+                            4. What are my skills
+                            5. What are my interests
+                        </p>
+                    </div>
+                </div>
+                <div class="face right">
+                    <div class="hobbies">
+                        <p>
+                            1. Hiking
+                            2. Fishing
+                            3. Photography
+                            4. Development
+                            5. Writing
+                            6. Reading
 
-                </p>
+                        </p>
+                    </div>
+                </div>
+                <div class="face top">
+                    <div class="portfolio">
+                        <p>
+                            1. Websites
+                            2. Eli Lilly Demos
+                            3. Photos
+                            4. Summary of projects at Eli Lilly
+                        </p>
+                    </div>
+                </div>
+                <div class="face bottom">
+                    <div class="education">
+                        <p>
+                            1. Bachelors Degree from Kelley School of Business at Indiana University, Bloomington, IN.:
+                            a. Information Systems
+                            b. Management
+                            c. Business Law, Ethics, and Decision Making
+                            2. Masters of Science in Information Systems from Kelley School of Business at Indiana
+                            University, Bloomington, IN.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="top">
-            <div class="portfolio">
-                <p>
-                    1. Websites
-                    2. Eli Lilly Demos
-                    3. Photos
-                    4. Summary of projects at Eli Lilly
-                </p>
-            </div>
-        </div>
-        <div id="bottom">
-            <div class="education">
-                <p>
-                    1. Bachelors Degree from Kelley School of Business at Indiana University, Bloomington, IN.:
-                    a. Information Systems
-                    b. Management
-                    c. Business Law, Ethics, and Decision Making
-                    2. Masters of Science in Information Systems from Kelley School of Business at Indiana University, Bloomington, IN.
-                </p>
-            </div>
+        <div class="controls">
+            <button class="control" id="left-button" onclick="rotateLeft()"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="control" id="right-button" onclick="rotateRight()"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="control" id="up-button" onclick="rotateUp()"><i class="fa-solid fa-arrow-up"></i></button>
+            <button class="control" id="down-button" onclick="rotateDown()"><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="control" id="reset-button" onclick="resetCube()"><i class="fa-solid fa-house"></i></button>
         </div>
     </main>
 </body>

@@ -1,0 +1,140 @@
+/* General body and main settings */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container settings */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cube container settings */
+.cube-container {
+    position: fixed; /* Change from relative to fixed */
+    width: 56vh;
+    height: 56vh;
+    perspective: 1000px;
+    top: 50%; /* Add this */
+    left: 50%; /* Add this */
+    transform: translate(-50%, -50%); /* Add this */
+    z-index: -1; /* Add this to keep it behind the container initially */
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cube-container.visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* The cube itself */
+.cube {
+    position: absolute; /* Ensures it’s positioned relative to the container */
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Faces of the cube */
+.cube .face {
+    position: absolute;
+    width: 100%;
+    background-image: url('../img/waterfall.JPG');
+    background-size: cover;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transform-origin: center;
+}
+
+.cube .front  { transform: rotateY(0deg) translateZ(28vh); }
+.cube .back   { transform: rotateY(180deg) translateZ(28vh); }
+.cube .right  { transform: rotateY(90deg) translateZ(28vh); }
+.cube .left   { transform: rotateY(-90deg) translateZ(28vh); }
+.cube .top    { transform: rotateX(90deg) translateZ(28vh); }
+.cube .bottom { transform: rotateX(-90deg) translateZ(28vh); }
+
+/* Controls */
+.controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 0;  /* Same level as cube-container when visible */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.controls.visible {
+    opacity: 1;
+}
+
+.control {
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.control:hover {
+    background-color: #0056b3;
+}
+
+.control i {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .cube-container {
+        width: 90vw;  /* Changed from vh to vw for better mobile display */
+        height: 90vw; /* Changed from vh to vw to maintain square shape */
+    }
+    
+    .cube .front, .cube .back, .cube .right, 
+    .cube .left, .cube .top, .cube .bottom {
+        transform: translateZ(45vw); /* Adjusted for new container size */
+    }
+    
+    .controls {
+        bottom: 5px;
+        width: 100%;
+    }
+    
+    .control {
+        font-size: 14px;
+        padding: 8px;
+        margin: 3px;
+    }
+    
+    .control i {
+        font-size: 16px;
+    }
+}
