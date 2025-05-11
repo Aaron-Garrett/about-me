@@ -68,9 +68,6 @@ main {
     background-size: cover;
     height: 100%;
     backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #333;
     padding: 20px;
     box-sizing: border-box;

@@ -41,7 +41,7 @@
                 <div class="face front">
                     <div class="homepage">
                         <div class="box" id="about-me" style="grid-area: box-1" onclick="rotateLeft()"><img
-                                src="./img/headshot.jpg"/><!-- About Me --></div>
+                                src="./img/headshot.jpg" /><!-- About Me --></div>
                         <div class="box" id="portfolio" style="grid-area: box-2" onclick="rotateUp()"><img
                                 src="./img/logos.png" /><!-- Portfolio --></div>
                         <div class="box" id="education" style="grid-area: box-3" onclick="rotateDown()"><img
@@ -51,22 +51,35 @@
                     </div>
                 </div>
                 <div class="face left">
-                    <div class="about-me">
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i class="fa-solid fa-arrow-up"></i></button>
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills) <i class="fa-solid fa-arrow-right"></i></button>
-                        <p>
-                            1. Where I'm from
-                            2. What are my passions
-                            3. What are my goals
-                            4. What are my skills
-                            5. What are my interests
-                        </p>
-                        <button class="control education-button" onclick="rotateDown()">My Education <i class="fa-solid fa-arrow-down"></i></button>
+                    <div class="top-nav">
+                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                                class="fa-solid fa-arrow-up"></i></button>
+                    </div>
+                    <div class="content">
+                        <div class="about-me">
+
+                            <p>
+                                1. Where I'm from
+                                2. What are my passions
+                                3. What are my goals
+                                4. What are my skills
+                                5. What are my interests
+                            </p>
+                        </div>
+                    </div>
+                    <div class="side-nav">
+                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills)
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="bottom-nav">
+                        <button class="control education-button" onclick="rotateDown()">My Education <i
+                                class="fa-solid fa-arrow-down"></i></button>
                     </div>
                 </div>
                 <div class="face right">
                     <div class="hobbies">
-                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i
+                                class="fa-solid fa-arrow-left"></i></button>
                         <p>
                             1. Hiking
                             2. Fishing
@@ -76,45 +89,58 @@
                             6. Reading
 
                         </p>
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i class="fa-solid fa-arrow-up"></i></button>
-                        <button class="control education-button" onclick="rotateDown()">My Education <i class="fa-solid fa-arrow-down"></i></button>
+                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                                class="fa-solid fa-arrow-up"></i></button>
+                        <button class="control education-button" onclick="rotateDown()">My Education <i
+                                class="fa-solid fa-arrow-down"></i></button>
                     </div>
                 </div>
                 <div class="face top">
                     <div class="portfolio">
-                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i
+                                class="fa-solid fa-arrow-left"></i></button>
                         <p>
                             1. Websites
                             2. Eli Lilly Demos
                             3. Photos
                             4. Summary of projects at Eli Lilly
                         </p>
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills) <i class="fa-solid fa-arrow-right"></i></button>
-                        <button class="control education-button" onclick="rotateDown()">My Education <i class="fa-solid fa-arrow-down"></i></button>
+                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills)
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="control education-button" onclick="rotateDown()">My Education <i
+                                class="fa-solid fa-arrow-down"></i></button>
                     </div>
                 </div>
                 <div class="face bottom">
+                    <div style="grid-area: box-top"><button class="control about-me-button" onclick="rotateLeft()">About
+                            Me <i class="fa-solid fa-arrow-left"></i></button></div>
+                    <div style="grid-area: box-content"></div>
                     <div class="education">
-                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i class="fa-solid fa-arrow-left"></i></button>
                         <p>
-                            1. Bachelors Degree from Kelley School of Business at Indiana University, Bloomington, IN.:
+                            1. Bachelors Degree from Kelley School of Business at Indiana University, Bloomington,
+                            IN.:
                             a. Information Systems
                             b. Management
                             c. Business Law, Ethics, and Decision Making
                             2. Masters of Science in Information Systems from Kelley School of Business at Indiana
                             University, Bloomington, IN.
                         </p>
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills) <i class="fa-solid fa-arrow-right"></i></button>
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i class="fa-solid fa-arrow-up"></i></button>
+                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills)
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                                class="fa-solid fa-arrow-up"></i></button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="controls">
-            <button class="control" id="left-button" onclick="rotateLeft()"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="control" id="right-button" onclick="rotateRight()"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="control" id="left-button" onclick="rotateLeft()"><i
+                    class="fa-solid fa-arrow-left"></i></button>
+            <button class="control" id="right-button" onclick="rotateRight()"><i
+                    class="fa-solid fa-arrow-right"></i></button>
             <button class="control" id="up-button" onclick="rotateUp()"><i class="fa-solid fa-arrow-up"></i></button>
-            <button class="control" id="down-button" onclick="rotateDown()"><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="control" id="down-button" onclick="rotateDown()"><i
+                    class="fa-solid fa-arrow-down"></i></button>
             <button class="control" id="reset-button" onclick="resetCube()"><i class="fa-solid fa-house"></i></button>
         </div>
     </main>
