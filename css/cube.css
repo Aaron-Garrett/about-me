@@ -115,7 +115,7 @@ main {
 @media (max-width: 768px) {
     .cube-container {
         width: 90vw;  /* Changed from vh to vw for better mobile display */
-        height: 90vw; /* Changed from vh to vw to maintain square shape */
+        max-height: 90vw; /* Changed from vh to vw to maintain square shape */
     }
     
     .cube .front, .cube .back, .cube .right, 
