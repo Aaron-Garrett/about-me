@@ -189,74 +189,6 @@
   padding: 1rem;
 }
 
-.about-me {
-  display: flex;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  z-index: 0;
-  background-color: transparent;
-  backdrop-filter: blur(0.2rem);
-  width: 95%;
-  height: fit-content;
-  padding: 1rem;
-  color: white;
-}
-
-.portfolio {
-  display: flex;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  z-index: 0;
-  background-color: transparent;
-  backdrop-filter: blur(0.2rem);
-  width: 95%;
-  height: fit-content;
-  padding: 1rem;
-  color: white;
-}
-
-.education {
-  display: flex;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  z-index: 0;
-  background-color: transparent;
-  backdrop-filter: blur(0.2rem);
-  width: 95%;
-  height: fit-content;
-  padding: 1rem;
-  color: white;
-}
-
-.hobbies {
-  display: flex;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  z-index: 0;
-  background-color: transparent;
-  backdrop-filter: blur(0.2rem);
-  width: 95%;
-  height: fit-content;
-  padding: 1rem;
-  color: white;
-}
-
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -316,51 +248,6 @@
   /* Optionally, scale the image when hovered */
   transition: transform 0.3s ease-in-out;
   z-index: 10;
-}
-
-.left {
-  display: block;
-}
-
-.front {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 1rem;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  background-color: transparent;
-  backdrop-filter: blur(0.2rem);
-  width: 95%;
-  height: 95%;
-  padding: 1rem;
-  color: white;
-}
-
-.front .top-nav {
-  grid-row: 1;
-  grid-column: 2;
-  justify-self: center;
-}
-
-.front .content {
-  grid-row: 2;
-  grid-column: 2;
-  align-self: center;
-  text-align: left;
-}
-
-.front .side-nav {
-  grid-row: 2;
-  grid-column: 3;
-  align-self: center;
-}
-
-.front .bottom-nav {
-  grid-row: 3;
-  grid-column: 2;
-  justify-self: center;
 }
 
 

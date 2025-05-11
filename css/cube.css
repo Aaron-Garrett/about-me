@@ -83,11 +83,11 @@ main {
     transform: rotateY(180deg) translateZ(28vh);
 }
 
-.cube .right {
+.cube .right-cube {
     transform: rotateY(90deg) translateZ(28vh);
 }
 
-.cube .left {
+.cube .left-cube {
     transform: rotateY(-90deg) translateZ(28vh);
 }
 
@@ -156,11 +156,11 @@ main {
         transform: rotateY(180deg) translateZ(40vw);
     }
 
-    .cube .right {
+    .cube .right-cube {
         transform: rotateY(90deg) translateZ(40vw);
     }
 
-    .cube .left {
+    .cube .left-cube {
         transform: rotateY(-90deg) translateZ(40vw);
     }
 
@@ -175,8 +175,8 @@ main {
     /* Remove the combined transform that was causing overlap */
     .cube .front,
     .cube .back,
-    .cube .right,
-    .cube .left,
+    .cube .right-cube,
+    .cube .left-cube,
     .cube .top,
     .cube .bottom {
         padding: 10px;

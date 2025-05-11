@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/cube.css">
+    <link rel="stylesheet" type="text/css" href="css/cube-face.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
     <script src="script.js"></script>
     <script src="cube-move.js"></script>
@@ -50,36 +51,37 @@
                                 src="./img/Eagle_Carrying_Fish_Cropped.jpg" /> <!-- Hobbies --></div>
                     </div>
                 </div>
-                <div class="face left">
+                <div class="face left-cube">
                     <div class="top-nav">
                         <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
                                 class="fa-solid fa-arrow-up"></i></button>
                     </div>
-                    <div class="content">
-                        <div class="about-me">
-
-                            <p>
-                                1. Where I'm from
-                                2. What are my passions
-                                3. What are my goals
-                                4. What are my skills
-                                5. What are my interests
-                            </p>
-                        </div>
+                    <div class="about-me">
+                        <p>
+                            1. Where I'm from
+                            2. What are my passions
+                            3. What are my goals
+                            4. What are my skills
+                            5. What are my interests
+                        </p>
                     </div>
                     <div class="side-nav">
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills)
+                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies
                             <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                     <div class="bottom-nav">
                         <button class="control education-button" onclick="rotateDown()">My Education <i
                                 class="fa-solid fa-arrow-down"></i></button>
                     </div>
+                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
+                        class="fa-solid fa-house"></i></button></div>
                 </div>
-                <div class="face right">
+                <div class="face right-cube">
+                    <div class="top-nav">
+                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                                class="fa-solid fa-arrow-up"></i></button>
+                    </div>
                     <div class="hobbies">
-                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i
-                                class="fa-solid fa-arrow-left"></i></button>
                         <p>
                             1. Hiking
                             2. Fishing
@@ -89,32 +91,55 @@
                             6. Reading
 
                         </p>
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
-                                class="fa-solid fa-arrow-up"></i></button>
+                    </div>
+                    <div class="side-nav">
+                        <button class="control about-me-button" onclick="rotateLeft()"><i
+                                class="fa-solid fa-arrow-left"></i>About Me</button>
+                    </div>
+                    <div class="bottom-nav">
                         <button class="control education-button" onclick="rotateDown()">My Education <i
                                 class="fa-solid fa-arrow-down"></i></button>
                     </div>
+                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
+                                class="fa-solid fa-house"></i></button></div>
                 </div>
                 <div class="face top">
+                    <div class="side-nav-left">
+                        <button class="control about-me-button" onclick="rotateLeft()"><i
+                                class="fa-solid fa-arrow-left"></i>About Me</button>
+                    </div>
+                    <div class="side-nav-right">
+                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                     <div class="portfolio">
-                        <button class="control about-me-button" onclick="rotateLeft()">About Me <i
-                                class="fa-solid fa-arrow-left"></i></button>
                         <p>
                             1. Websites
                             2. Eli Lilly Demos
                             3. Photos
                             4. Summary of projects at Eli Lilly
                         </p>
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills)
-                            <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="bottom-nav">
                         <button class="control education-button" onclick="rotateDown()">My Education <i
                                 class="fa-solid fa-arrow-down"></i></button>
                     </div>
+                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
+                                class="fa-solid fa-house"></i></button></div>
                 </div>
                 <div class="face bottom">
-                    <div style="grid-area: box-top"><button class="control about-me-button" onclick="rotateLeft()">About
-                            Me <i class="fa-solid fa-arrow-left"></i></button></div>
-                    <div style="grid-area: box-content"></div>
+                    <div class="top-nav">
+                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                                class="fa-solid fa-arrow-up"></i></button>
+                    </div>
+                    <div class="side-nav-left">
+                        <button class="control about-me-button" onclick="rotateLeft()"><i
+                                class="fa-solid fa-arrow-left"></i>About Me</button>
+                    </div>
+                    <div class="side-nav-right">
+                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                     <div class="education">
                         <p>
                             1. Bachelors Degree from Kelley School of Business at Indiana University, Bloomington,
@@ -125,11 +150,10 @@
                             2. Masters of Science in Information Systems from Kelley School of Business at Indiana
                             University, Bloomington, IN.
                         </p>
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies (Unofficial Skills)
-                            <i class="fa-solid fa-arrow-right"></i></button>
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
-                                class="fa-solid fa-arrow-up"></i></button>
                     </div>
+                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
+                        class="fa-solid fa-house"></i></button></div>
+            </div>
                 </div>
             </div>
         </div>
