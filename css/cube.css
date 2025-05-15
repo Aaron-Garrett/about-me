@@ -99,6 +99,10 @@ main {
     transform: rotateX(-90deg) translateZ(28vh);
 }
 
+.cube .back-cube {
+    transform: rotateY(-180deg) translateZ(28vh);
+}
+
 /* Controls */
 .controls {
     position: fixed;
@@ -178,6 +182,7 @@ main {
     .cube .right-cube,
     .cube .left-cube,
     .cube .top,
+    .cube .back-cube,
     .cube .bottom {
         padding: 10px;
     }

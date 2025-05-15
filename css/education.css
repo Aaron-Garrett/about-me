@@ -1,0 +1,85 @@
+.education-top, .education-bottom {
+    background-color: rgba(255, 255, 255, 0.534);
+    border: solid 3px black;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    height: 45%;
+    width: 90%;
+    color: black;
+    text-align: center;
+}
+
+.education button {
+    width: auto; /* Changed from 10% to auto */
+    min-width: 40px; /* Added minimum width for icon */
+    height: auto;
+    margin: 1rem;
+    background: none;
+    border: none;
+    padding: 0.5rem; /* Added padding for better spacing */
+    display: flex; /* Added to properly align icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.education button i {
+    font-size: 1.2rem; /* Added to ensure icon is visible */
+}
+
+.bachelors, .masters {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background: white;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    z-index: 10;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.bachelors-card, .masters-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.534);
+    border: solid 2px black;
+    min-width: 90%;
+    height: 90%;
+}
+
+.bachelors-card p, .masters-card p {
+    font-size: 1.25rem;
+    margin: .5rem;
+    padding: 0.5rem;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.education-list {
+    text-align: start;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+    padding-top: 1rem;
+}
+
+.education {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+}

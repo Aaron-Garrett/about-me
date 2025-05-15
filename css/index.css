@@ -284,8 +284,8 @@
   opacity: 0;
 }
 
-#hobbies::before {
-  content: "My Hobbies";
+#book-list::before {
+  content: "Book List";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -298,7 +298,7 @@
 #about-me:hover::before,
 #portfolio:hover::before,
 #education:hover::before,
-#hobbies:hover::before {
+#book-list:hover::before {
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -366,7 +366,7 @@
   #about-me::before,
   #portfolio::before,
   #education::before,
-  #hobbies::before {
+  #book-list::before {
     opacity: 1;
     display: flex;
     justify-content: center;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/cube.css">
     <link rel="stylesheet" type="text/css" href="css/cube-face.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/education.css">
     <script src="script.js"></script>
     <script src="cube-move.js"></script>
 </head>
@@ -47,14 +48,20 @@
                                 src="./img/logos.png" /><!-- Portfolio --></div>
                         <div class="box" id="education" style="grid-area: box-3" onclick="rotateDown()"><img
                                 src="./img/kelley.jpg" /><!-- Education --></div>
-                        <div class="box" id="hobbies" style="grid-area: box-4" onclick="rotateRight()"><img
-                                src="./img/Eagle_Carrying_Fish_Cropped.jpg" /> <!-- Hobbies --></div>
+                        <div class="box" id="book-list" style="grid-area: box-4" onclick="rotateRight()"><img
+                                src="./img/Eagle_Carrying_Fish_Cropped.jpg" /> <!-- Book List --></div>
                     </div>
                 </div>
                 <div class="face left-cube">
                     <div class="top-nav">
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                        <button class="control portfolio-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateUp()">My Portfolio <i
                                 class="fa-solid fa-arrow-up"></i></button>
+                    </div>
+                    <div class="side-nav-left">
+                        <button class="control hobbies-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateBack()"><i
+                                class="fa-solid fa-arrow-left"></i>Hobbies</button>
                     </div>
                     <div class="about-me">
                         <p>
@@ -65,51 +72,70 @@
                             5. What are my interests
                         </p>
                     </div>
-                    <div class="side-nav">
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies
+                    <div class="side-nav-right">
+                        <button class="control book-list-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateRight()">Book List
                             <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                     <div class="bottom-nav">
-                        <button class="control education-button" onclick="rotateDown()">My Education <i
+                        <button class="control education-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateDown()">My Education <i
                                 class="fa-solid fa-arrow-down"></i></button>
                     </div>
-                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
-                        class="fa-solid fa-house"></i></button></div>
+                    <div class="home-nav"><button class="control home-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); resetCube()"><i
+                                class="fa-solid fa-house"></i></button></div>
                 </div>
                 <div class="face right-cube">
                     <div class="top-nav">
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                        <button class="control portfolio-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateUp()">My Portfolio <i
                                 class="fa-solid fa-arrow-up"></i></button>
                     </div>
-                    <div class="hobbies">
+                    <div class="book-list">
                         <p>
-                            1. Hiking
-                            2. Fishing
-                            3. Photography
-                            4. Development
-                            5. Writing
-                            6. Reading
-
+                            1. <i>Extreme Ownership</i>
+                            2. <i>Atomic Habits</i>
+                            3. <i>Being Wrong: Adventures in the Margin of Error</i>
+                            4. <i>The 15 Invaluable Laws of Growth</i>
+                            5. <i>Dare to Lead</i>
+                            6. <i>The 21 Irrefutable Laws of Leadership</i>
+                            7. <i>The Lord of the Rings</i>
                         </p>
                     </div>
-                    <div class="side-nav">
-                        <button class="control about-me-button" onclick="rotateLeft()"><i
+                    <div class="side-nav-right">
+                        <button class="control hobbies-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateBack()">Hobbies
+                            <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="side-nav-left">
+                        <button class="control about-me-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateLeft()"><i
                                 class="fa-solid fa-arrow-left"></i>About Me</button>
                     </div>
                     <div class="bottom-nav">
-                        <button class="control education-button" onclick="rotateDown()">My Education <i
+                        <button class="control education-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateDown()">My Education <i
                                 class="fa-solid fa-arrow-down"></i></button>
                     </div>
-                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
+                    <div class="home-nav"><button class="control home-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); resetCube()"><i
                                 class="fa-solid fa-house"></i></button></div>
                 </div>
                 <div class="face top">
+                    <div class="top-nav">
+                        <button class="control hobbies-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateBack()">Hobbies<i
+                                class="fa-solid fa-arrow-up"></i></button>
+                    </div>
                     <div class="side-nav-left">
-                        <button class="control about-me-button" onclick="rotateLeft()"><i
+                        <button class="control about-me-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateLeft()"><i
                                 class="fa-solid fa-arrow-left"></i>About Me</button>
                     </div>
                     <div class="side-nav-right">
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies
+                        <button class="control book-list-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateRight()">Book List
                             <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                     <div class="portfolio">
@@ -121,52 +147,187 @@
                         </p>
                     </div>
                     <div class="bottom-nav">
-                        <button class="control education-button" onclick="rotateDown()">My Education <i
+                        <button class="control education-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateDown()">My Education <i
                                 class="fa-solid fa-arrow-down"></i></button>
                     </div>
-                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
+                    <div class="home-nav"><button class="control home-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); resetCube()"><i
                                 class="fa-solid fa-house"></i></button></div>
                 </div>
                 <div class="face bottom">
                     <div class="top-nav">
-                        <button class="control portfolio-button" onclick="rotateUp()">My Portfolio <i
+                        <button class="control portfolio-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateUp()">My Portfolio <i
                                 class="fa-solid fa-arrow-up"></i></button>
                     </div>
                     <div class="side-nav-left">
-                        <button class="control about-me-button" onclick="rotateLeft()"><i
+                        <button class="control about-me-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateLeft()"><i
                                 class="fa-solid fa-arrow-left"></i>About Me</button>
                     </div>
                     <div class="side-nav-right">
-                        <button class="control hobbies-button" onclick="rotateRight()">Hobbies
+                        <button class="control book-list-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateRight()">Book List
                             <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="education">
-                        <p>
-                            1. Bachelors Degree from Kelley School of Business at Indiana University, Bloomington,
-                            IN.:
-                            a. Information Systems
-                            b. Management
-                            c. Business Law, Ethics, and Decision Making
-                            2. Masters of Science in Information Systems from Kelley School of Business at Indiana
-                            University, Bloomington, IN.
-                        </p>
+                    <div class="bottom-nav">
+                        <button class="control hobbies-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateBack()">Hobbies
+                            <i class="fa-solid fa-arrow-down"></i></button>
                     </div>
-                    <div class="home-nav"><button class="control home-button" onclick="resetCube()"><i
-                        class="fa-solid fa-house"></i></button></div>
-            </div>
+                    <div class="education">
+                        <div class="education-top" onclick="growBachelors()">
+                            <h2>Bachelor's Degree</h2>
+                            <p>
+                                From Kelley School of Business at Indiana University, Bloomington, IN.<br>
+                            </p>
+                            <p class="education-list">
+                                1. Information Systems<br>
+                                2. Management<br>
+                                3. Business Law, Ethics, and Decision Making<br>
+                            </p>
+                            <div class="bachelors">
+                                <button onclick="hideBachelors(event)"><i class="fa-solid fa-reply"></i></button>
+                                <div class="bachelors-card">
+                                    <h2>Information Systems</h2>
+                                    <p>
+                                        This degree focused mostly on technological foundations. This includes
+                                        things such as getting intimately familiar with Excel, understanding databases
+                                        and SQL, learning some fundamental programming, how to tranlsate business needs
+                                        into user stories and technical requirements, and how internet and
+                                        infrastructure works.
+                                    </p>
+                                </div>
+                                <div class="bachelors-card">
+                                    <h2>Management</h2>
+                                    <p>
+                                        This degree focused on people. This ranged from the nuiances of international
+                                        business, to a thorough understanding of HR and its functions, and included
+                                        things such as change management and organizational structures.
+                                    </p>
+                                </div>
+                                <div class="bachelors-card">
+                                    <h2>Business Law, Ethics, and Decision Making</h2>
+                                    <p>
+                                        This degree focused on understanding the legal and ethical implications of
+                                        business decisions. This includes things such as contract law, tort law, and
+                                        the different ethical frameworks that can be used to make decisions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education-bottom" onclick="growMasters()">
+                            <h2>Master's Degree</h2>
+                            <p>
+                                From Kelley School of Business at Indiana University, Bloomington, IN.<br>
+                            </p>
+                            <p class="education-list">
+                                1. Cybersecurity<br>
+                                2. Business Intelligence and Analytics<br>
+                                3. Enterprise Resource Planning<br>
+                            </p>
+                            <div class="masters">
+                                <button onclick="hideMasters(event)"><i class="fa-solid fa-reply"></i></button>
+
+                                <div class="masters-card">
+                                    <h2>Cybersecurity</h2>
+                                    <p>
+                                        This concentration was dedicated to preparing
+                                        students to pass the CISSP exam, excluding vocabulary. It was all about
+                                        concepts: the fundamentals of
+                                        cybersecurity, how hackers work, understanding encryption, and the legality
+                                        around cybersecurity.
+                                    </p>
+                                </div>
+                                <div class="masters-card">
+                                    <h2>Business Intelligence and Analytics</h2>
+                                    <p>
+                                        This
+                                        concentration was dedicated to
+                                        understanding and building supervised learning models and how to make
+                                        decisions
+                                        based on the results of those models.
+                                        It also dug into unsupervised learning models, providing a foundation and
+                                        understanding to move into the AI world.
+                                    </p>
+                                </div>
+                                <div class="masters-card">
+                                    <h2>Enterprise Resource Planning</h2>
+                                    <p>
+                                        This
+                                        concentration was dedicated to understanding how
+                                        ERP systems work. It specialized in understanding how SAP works and
+                                        demonstrating
+                                        our knowledge by building a system from
+                                        Company Code up. Twice.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-nav"><button class="control home-button"
+                            onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); resetCube()"><i
+                                class="fa-solid fa-house"></i></button></div>
+                    <div class="face back-cube">
+                        <div class="top-nav">
+                            <button class="control hobbies-button"
+                                onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateUp()">My
+                                Portfolio
+                                <i class="fa-solid fa-arrow-up"></i></button>
+                        </div>
+                        <div class="side-nav-left">
+                            <button class="control about-me-button"
+                                onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateRight()"><i
+                                    class="fa-solid fa-arrow-left"></i>Book List</button>
+                        </div>
+                        <div class="hobbies">
+                            <p>
+                                1. Hiking
+                                2. Fishing
+                                3. Photography
+                                4. Development
+                                5. Writing
+                                6. Reading
+
+                            </p>
+                        </div>
+                        <div class="side-nav-right">
+                            <button class="control about-me-button"
+                                onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateLeft()"><i
+                                    class="fa-solid fa-arrow-right"></i>About Me</button>
+                        </div>
+                        <div class="bottom-nav">
+                            <button class="control education-button"
+                                onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateDown()">My
+                                Education
+                                <i class="fa-solid fa-arrow-down"></i></button>
+                        </div>
+                        <div class="home-nav"><button class="control home-button"
+                                onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); resetCube()"><i
+                                    class="fa-solid fa-house"></i></button></div>
+                        <div class="bottom-nav">
+                            <button class="control education-button"
+                                onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateDown()">My
+                                Education
+                                <i class="fa-solid fa-arrow-down"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="controls">
-            <button class="control" id="left-button" onclick="rotateLeft()"><i
-                    class="fa-solid fa-arrow-left"></i></button>
-            <button class="control" id="right-button" onclick="rotateRight()"><i
-                    class="fa-solid fa-arrow-right"></i></button>
-            <button class="control" id="up-button" onclick="rotateUp()"><i class="fa-solid fa-arrow-up"></i></button>
-            <button class="control" id="down-button" onclick="rotateDown()"><i
-                    class="fa-solid fa-arrow-down"></i></button>
-            <button class="control" id="reset-button" onclick="resetCube()"><i class="fa-solid fa-house"></i></button>
-        </div>
+        <!-- <div class="controls">
+                <button class="control" id="left-button" onclick="rotateLeft()"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                <button class="control" id="right-button" onclick="rotateRight()"><i
+                        class="fa-solid fa-arrow-right"></i></button>
+                <button class="control" id="up-button" onclick="rotateUp()"><i
+                        class="fa-solid fa-arrow-up"></i></button>
+                <button class="control" id="down-button" onclick="rotateDown()"><i
+                        class="fa-solid fa-arrow-down"></i></button>
+                <button class="control" id="reset-button" onclick="resetCube()"><i
+                        class="fa-solid fa-house"></i></button>
+            </div> -->
     </main>
 </body>
 
