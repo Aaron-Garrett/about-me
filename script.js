@@ -42,3 +42,19 @@ const hideMasters = (event) => {
   console.log('mastersDiv:', mastersDiv); // Add this line for debugging
   if (mastersDiv) mastersDiv.style.display = 'none';
 }
+
+const growBook = (book) => {
+  const bookDiv = document.querySelector(`.${book}`);
+  if (bookDiv) {
+    bookDiv.style.display = 'flex';
+    bookDiv.classList.add('visible');
+  }
+}
+
+const hideBook = (book) => {
+  const bookDiv = document.querySelector(`.${book}`);
+  if (bookDiv) {
+    bookDiv.style.display = 'none';
+    bookDiv.classList.remove('visible');
+  }
+}

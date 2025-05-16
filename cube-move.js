@@ -2,17 +2,21 @@ let rotationX = 0;
 let rotationY = 0;
 
 function rotateLeft() {
-    if (rotationY === 0 && rotationX === 0) {
+    if (rotationY % 360 === 0 && rotationX % 360  === 0) {
         rotationY += 90;
     }
+    
     if (rotationY % 360 === -90) {
         rotationY += 180;
     }
     if (rotationY % 360 === -180) {
-        rotationY += 270;
+        rotationY -= 90;
     }
     if (rotationY % 360 === 180) {
-        rotationY -= 90;
+        rotationY += 90;
+    }
+    if (rotationY % 360 === 270) {
+        rotationY += 180;
     }
     if (rotationX % 360 === 90) {
         rotationY += 90;
@@ -30,7 +34,7 @@ function rotateLeft() {
 }
 
 function rotateRight() {
-    if (rotationY === 0 && rotationX === 0) {
+    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
         rotationY -= 90; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === 90) {
@@ -43,8 +47,11 @@ function rotateRight() {
     if (rotationY % 360 === -180) {
         rotationY += 90;
     }
+    if (rotationY % 360 === -270) {
+        rotationY -= 180;
+    }
     if (rotationY % 360 === 180) {
-        rotationY -= 270;
+        rotationY += 90;
     }
     if (rotationX % 360 === -90) {
         rotationY -= 90;
@@ -58,7 +65,7 @@ function rotateRight() {
 }
 
 function rotateUp() {
-    if (rotationY === 0 && rotationX === 0) {
+    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
         rotationX -= 90; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === -90) {
@@ -77,6 +84,14 @@ function rotateUp() {
         rotationY -= 180;
         rotationX -= 90;
     }
+    if (rotationY % 360 === 270) {
+        rotationY -= 270;
+        rotationX -= 90;
+    }
+    if (rotationY % 360 === -270) {
+        rotationY += 270;
+        rotationX -= 90;
+    }
     if (rotationX % 360 === 90) {
         rotationX -= 180;
     }
@@ -84,7 +99,7 @@ function rotateUp() {
 }
 
 function rotateDown() {
-    if (rotationY === 0 && rotationX === 0) {
+    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
         rotationX += 90; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === -90) {
@@ -102,7 +117,15 @@ function rotateDown() {
     if (rotationY % 360 === 180) {
         rotationY -= 180;
         rotationX += 90;
-    }    
+    }
+    if (rotationY % 360 === 270) {
+        rotationY -= 270;
+        rotationX -= 90;
+    }
+    if (rotationY % 360 === -270) {
+        rotationY += 270;
+        rotationX -= 90;
+    }
     if (rotationX % 360 === -90) {
         rotationX += 180;
     }
@@ -110,7 +133,7 @@ function rotateDown() {
 }
 
 function rotateBack() {
-    if (rotationY === 0 && rotationX === 0) {
+    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
         rotationY += 180; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === -90) {
@@ -119,20 +142,26 @@ function rotateBack() {
     if (rotationY % 360 === 90) {
         rotationY += 90;
     }
+    if (rotationY % 360 === 270) {
+        rotationY -= 90;
+    }
+    if (rotationY % 360 === -270) {
+        rotationY += 90;
+    }
     if (rotationX % 360 === -90) {
-        rotationX +=90;
-        rotationY -=180;
+        rotationX += 90;
+        rotationY -= 180;
     }
     if (rotationX % 360 === 90) {
-        rotationX -=90;
-        rotationY +=180;
+        rotationX -= 90;
+        rotationY += 180;
     }
     updateCubeRotation();
 }
 
 function resetCube() {
-    rotationX = 0;
-    rotationY = 0;
+    rotationX = Math.round(rotationX / 360) * 360;
+    rotationY = Math.round(rotationY / 360) * 360;
     updateCubeRotation();
 }
 
