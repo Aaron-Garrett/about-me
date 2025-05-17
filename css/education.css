@@ -4,6 +4,7 @@
     border-radius: 10px;
     margin: 1rem;
     padding: 1rem;
+    z-index: 2;
     height: 45%;
     width: 90%;
     color: black;
@@ -27,34 +28,18 @@
     font-size: 1.2rem; /* Added to ensure icon is visible */
 }
 
-.bachelors, .masters {
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    background: white;
-    top: 0;
-    left: 0;
-    transform: translate(0%, 0%);
-    z-index: 10;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: auto;
-    white-space: nowrap;
-    font-size: 1rem;
-    height: 100%;
-    width: 100%;
-}
-
 .bachelors-card, .masters-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: space-around;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0.5rem;
     padding: 0.5rem;
+    overflow-y: auto;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.534);
-    border: solid 2px black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 3px rgba(134, 134, 134, 0.534);
     min-width: 90%;
     height: 90%;
 }
@@ -63,7 +48,8 @@
     font-size: 1.25rem;
     margin: .5rem;
     padding: 0.5rem;
-    text-align: center;
+    line-height: 2rem;
+    text-align: start;
     word-wrap: break-word;
     white-space: normal;
 }
@@ -82,4 +68,45 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: space-around;
+}
+
+.bachelors, .masters {
+    display: flex;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: -3;
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow-x: auto;
+    overflow-y: auto;
+    pointer-events: all;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.bachelors.visible,
+.masters.visible {
+    opacity: 1;
+    z-index: 13;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.masters button,
+.bachelors  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-right: 3rem;
+    cursor: pointer;
 }

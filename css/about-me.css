@@ -1,0 +1,90 @@
+.triangles {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+    overflow: hidden; /* Ensure nothing spills outside */
+}
+
+.about-me {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.corner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    clip-path: polygon(0 0, 0 45%, 100% 0); /* Adjusted from 65% to 45% */
+    overflow: hidden;
+}
+
+.top-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(100% 100%, 100% 85%, 0 100%); /* Flipped horizontally */
+    overflow: hidden;
+}
+
+.diagonal {
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    padding: 0;
+    margin: 0;
+    clip-path: polygon(100% 0, 0 75%, 0 100%, 100% 25%);
+    overflow: hidden;
+}
+
+.diagonal:nth-child(2) {
+    top: -15%;
+}
+
+.diagonal:nth-child(3) {
+    top: 0%;
+}
+
+.diagonal:nth-child(4) {
+    top: 15%;
+}
+
+.diagonal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-me-landing {
+    position: relative;
+    background-color: transparent;
+    backdrop-filter: blur(0.2rem);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: left;
+    width: 100%;
+    z-index: 24;
+}

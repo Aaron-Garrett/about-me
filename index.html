@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/education.css">
     <link rel="stylesheet" type="text/css" href="css/book-list.css">
+    <link rel="stylesheet" type="text/css" href="css/about-me.css">
     <script src="script.js"></script>
     <script src="cube-move.js"></script>
 </head>
@@ -65,13 +66,32 @@
                                 class="fa-solid fa-arrow-left"></i>Hobbies</button>
                     </div>
                     <div class="about-me">
-                        <p>
+                        <div class="about-me-landing">
+                            <div class="triangles">
+                                <div class="corner top-right">
+                                    <img src="./img/DSC_0137_1.jpg" alt="Profile 1">
+                                </div>
+                                <div class="diagonal">
+                                    <img src="./img/Cardinal.jpg" alt="Profile 1">
+                                </div>
+                                <div class="diagonal">
+                                    <img src="./img/DSC_0137_1.jpg" alt="Profile 2">
+                                </div>
+                                <div class="diagonal">
+                                    <img src="./img/Loon Blue Water.jpg" alt="Profile 3">
+                                </div>
+                                <div class="corner bottom-left">
+                                    <img src="./img/DSC_0137_1.jpg" alt="Profile 4">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <p>
                             1. Where I'm from<br>
                             2. What are my passions<br>
                             3. What are my goals<br>
                             4. What are my skills<br>
                             5. What are my interests<br>
-                        </p>
+                        </p> -->
                     </div>
                     <div class="side-nav-right">
                         <button class="control book-list-button"
@@ -94,24 +114,129 @@
                                 class="fa-solid fa-arrow-up"></i></button>
                     </div>
                     <div class="book-list">
-                        <div class="books">
-                            <img src="./img/extreme-ownership.jpg" alt="Extreme Ownership" onclick="growBook('Ownership')"/>
-                            <img src="./img/atomic-habits.jpg" alt="Atomic Habits" onclick="growBook('Habits')" />
-                            <img src="./img/being-wrong.jpg" alt="Being Wrong" onclick="growBook('Wrong')" />
-                            <img src="./img/15-invaluable-laws.jpg" alt="15 Invaluable Laws of Growth" onclick="growBook('Growth')" />
-                            <img src="./img/dare-to-lead.jpg" alt="Dare to Lead" onclick="growBook('Dare')" />
-                            <img src="./img/21-irrefutable-laws.jpg" alt="21 Irrefutable Laws of Leadership" onclick="growBook('Leadership')" />
-                            <img src="./img/lord-of-the-rings.jpg" alt="The Lord of the Rings" onclick="growBook('LotR')" />
+                        <div class="book-grid">
+                            <div class="books">
+                                <div class="book-img" onclick="growBook('ownership')">
+                                    <img src="./img/extreme-ownership.jpg" alt="Extreme Ownership" />
+                                </div>
+                                <div class="book-img" onclick="growBook('habits')">
+                                    <img src="./img/atomic-habits.jpg" alt="Atomic Habits" />
+                                </div>
+                                <div class="book-img" onclick="growBook('wrong')">
+                                    <img src="./img/being-wrong.jpg" alt="Being Wrong" />
+                                </div>
+                                <div class="book-img" onclick="growBook('growth')">
+                                    <img src="./img/15-invaluable-laws.jpg" alt="15 Invaluable Laws of Growth" />
+                                </div>
+                            </div>
+                            <div class="books">
+                                <div class="book-img" onclick="growBook('dare')">
+                                    <img src="./img/dare-to-lead.jpg" alt="Dare to Lead" />
+                                </div>
+                                <div class="book-img" onclick="growBook('leadership')">
+                                    <img src="./img/21-irrefutable-laws.jpg" alt="21 Irrefutable Laws of Leadership" />
+                                </div>
+                                <div class="book-img" onclick="growBook('lotr')">
+                                    <img src="./img/lord-of-the-rings.jpg" alt="The Lord of the Rings" />
+                                </div>
+                            </div>
+                            <div class="explanations">
+                                <div class="ownership-explanation">
+                                    <button onclick="hideBook('ownership')"><i class="fa-solid fa-close"></i></button>
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Own everything you can as it enables you to control what you can<br>
+                                        2. You need to lead up the chain of command as well<br>
+                                        3. There are no bad teams, only bad leaders<br>
+                                        4. Empower those around you, enable decentralized command<br>
+                                        5. Discipline = Freedom<br>
+                                    </p>
+                                </div>
+
+                                <div class="habits-explanation">
+                                    <button onclick="hideBook('habits')"><i class="fa-solid fa-close"></i></button>
+
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Make it obvious, attractive, easy, and satisfying<br>
+                                        2. Reverse #1 to break bad habits<br>
+                                        3. Habits only need two minutes to start being built<br>
+                                        4. Progress starts slow, but takes off the longer you do it<br>
+                                        5. The environment is important to building habits<br>
+                                    </p>
+                                </div>
+
+                                <div class="wrong-explanation">
+                                    <button onclick="hideBook('wrong')"><i class="fa-solid fa-close"></i></button>
+
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Being wrong often leads to new discoveries<br>
+                                        2. People often are scared of being wrong, which is elevated in groups </br>
+                                        3. Being wrong is a strength if you use it to learn new things and connect
+                                        authentically<br>
+                                        4. Being able to admit being wrong can lead to relief and even joy<br>
+                                        5. We need to build a culture where being wrong is acceptable and touted as
+                                        a positive force<br>
+                                    </p>
+                                </div>
+
+                                <div class="growth-explanation">
+                                    <button onclick="hideBook('growth')"><i class="fa-solid fa-close"></i></button>
+
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Growth requires intentionality<br>
+                                        2. Growth requires personal reflection<br>
+                                        3. Growth requires stretching beyond your comfort zone<br>
+                                        4. Pain and hardship, if harnessed, can lead to growth<br>
+                                        5. Asking questions is essential to growth<br>
+                                    </p>
+                                </div>
+
+                                <div class="dare-explanation">
+                                    <button onclick="hideBook('dare')"><i class="fa-solid fa-close"></i></button>
+
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Vulnerability is not weakness<br>
+                                        2. Courage is not the absence of fear<br>
+                                        3. A good leader is willing to rumble<br>
+                                        4. Safe workspaces are not created by hiding from conflict<br>
+                                        5. Trust is built in small moments<br>
+                                    </p>
+                                </div>
+
+                                <div class="leadership-explanation">
+                                    <button onclick="hideBook('leadership')"><i class="fa-solid fa-close"></i></button>
+
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Leadership requires growing relationships and building relationship
+                                        capital<br>
+                                        2. Success is limited by a leader's abilities, and those are grown with
+                                        daily processes<br>
+                                        3. Leaders capitalize on momentum<br>
+                                        4. Leaders build other leaders<br>
+                                        5. Leadership requires getting people to buy in<br>
+                                    </p>
+                                </div>
+
+                                <div class="lotr-explanation">
+                                    <button onclick="hideBook('lotr')"><i class="fa-solid fa-close"></i></button>
+
+                                    <p>
+                                        <strong>Key Takeaways:</strong><br>
+                                        1. Even the things een as insignificant have immense power<br>
+                                        2. The desire for good, if untamed, can lead to back outcomes<br>
+                                        3. A leader is humble, but not self-effacing with serving others<br>
+                                        4. "All we have to do is decide what to do with the time that is given to
+                                        us."<br>
+                                        5. Having an open mind can open you to incredible new experiences<br>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <p>
-                            1. <i>Extreme Ownership</i><br>
-                            2. <i>Atomic Habits</i><br>
-                            3. <i>Being Wrong: Adventures in the Margin of Error</i><br>
-                            4. <i>The 15 Invaluable Laws of Growth</i><br>
-                            5. <i>Dare to Lead</i><br>
-                            6. <i>The 21 Irrefutable Laws of Leadership</i><br>
-                            7. <i>The Lord of the Rings</i><br>
-                        </p>
                     </div>
                     <div class="side-nav-right">
                         <button class="control hobbies-button"
@@ -197,8 +322,21 @@
                                 2. Management<br>
                                 3. Business Law, Ethics, and Decision Making<br>
                             </p>
+                        </div>
+                        <div class="education-bottom" onclick="growMasters()">
+                            <h2>Master's Degree</h2>
+                            <p>
+                                From Kelley School of Business at Indiana University, Bloomington, IN.<br>
+                            </p>
+                            <p class="education-list">
+                                1. Cybersecurity<br>
+                                2. Business Intelligence and Analytics<br>
+                                3. Enterprise Resource Planning<br>
+                            </p>
+                        </div>
+                        <div class="education-pop-ups">
                             <div class="bachelors">
-                                <button onclick="hideBachelors(event)"><i class="fa-solid fa-reply"></i></button>
+                                <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
                                 <div class="bachelors-card">
                                     <h2>Information Systems</h2>
                                     <p>
@@ -226,19 +364,8 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="education-bottom" onclick="growMasters()">
-                            <h2>Master's Degree</h2>
-                            <p>
-                                From Kelley School of Business at Indiana University, Bloomington, IN.<br>
-                            </p>
-                            <p class="education-list">
-                                1. Cybersecurity<br>
-                                2. Business Intelligence and Analytics<br>
-                                3. Enterprise Resource Planning<br>
-                            </p>
                             <div class="masters">
-                                <button onclick="hideMasters(event)"><i class="fa-solid fa-reply"></i></button>
+                                <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
 
                                 <div class="masters-card">
                                     <h2>Cybersecurity</h2>

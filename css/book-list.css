@@ -1,15 +1,121 @@
 .books {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
+    display: flex;
+    align-items: center;
     gap: 1rem;
     padding: 1rem;
+    max-width: 100%;
+    max-height: 50%;
     justify-content: center;
 }
 
-.books img {
+.book-img {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.book-img img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     object-fit: cover;
-    border-radius: 5px;  /* Optional: adds rounded corners to images */
+    position: relative;
+}
+
+.book-img:hover {
+    cursor: pointer;
+    scale: 1.2;
+    z-index: 9;
+}
+
+.book-img:hover::before {
+    content: "Click to View Details";
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.book-grid {
+    display: block;
+    width: 100%;
+}
+
+.ownership-explanation,
+.habits-explanation,
+.leadership-explanation,
+.dare-explanation,
+.growth-explanation,
+.wrong-explanation,
+.lotr-explanation {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: -3;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    pointer-events: all;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.ownership-explanation.visible,
+.habits-explanation.visible,
+.leadership-explanation.visible,
+.dare-explanation.visible,
+.growth-explanation.visible,
+.wrong-explanation.visible,
+.lotr-explanation.visible {
+    opacity: 1;
+    z-index: 13;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.ownership-explanation button,
+.habits-explanation button,
+.leadership-explanation button,
+.dare-explanation button,
+.growth-explanation button,
+.wrong-explanation button,
+.lotr-explanation button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.ownership-explanation p,
+.habits-explanation p,
+.leadership-explanation p,
+.dare-explanation p,
+.growth-explanation p,
+.wrong-explanation p,
+.lotr-explanation p {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 3px rgba(134, 134, 134, 0.534);
+    padding: 3rem;
+    border-radius: 10px;
+    height: 75%;
+    width: 75%;
 }
