@@ -1,18 +1,10 @@
 .triangles {
     position: relative;
     width: 100%;
-    height: 300px;
-    border: 2px solid black;
-    overflow: hidden; /* Ensure nothing spills outside */
-}
-
-.about-me {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+    height: 40vh;
+    /* Ensure it takes full height of the grid cell */
+    overflow: hidden;
+    /* Ensure nothing spills outside */
 }
 
 .corner {
@@ -21,52 +13,99 @@
     height: 100%;
 }
 
-.top-right {
+.top-left {
     top: 0;
     right: 0;
-    clip-path: polygon(0 0, 0 45%, 100% 0); /* Adjusted from 65% to 45% */
+    clip-path: polygon(0 0, 0 45%, 100% 15%, 100% 0%);
     overflow: hidden;
 }
 
-.top-right img {
+.top-left:hover::before {
+    content: 'Where I\'m From';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 12%;
+    font-size: 2rem;
+    z-index: 7;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Add semi-transparent background */
+    color: white;
+    /* Text color */
+}
+
+.top-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateY(-30%);
 }
 
-.bottom-left img {
+.bottom-right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateY(18%);
 }
 
-.bottom-left {
+.bottom-right:hover::before {
+    content: 'My Goals';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 7;
+    top: 35%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Add semi-transparent background */
+    color: white;
+    /* Text color */
+}
+
+.bottom-right {
     bottom: 0;
     left: 0;
-    clip-path: polygon(100% 100%, 100% 85%, 0 100%); /* Flipped horizontally */
+    clip-path: polygon(0 100%, 0 85%, 100% 55%, 100% 100%);
     overflow: hidden;
 }
 
 .diagonal {
     position: absolute;
     width: 100%;
-    height: 140%;
+    height: 100%;
+    left: 0;
     padding: 0;
     margin: 0;
-    clip-path: polygon(100% 0, 0 75%, 0 100%, 100% 25%);
+    clip-path: polygon(100% 15%, 0 45%, 0 85%, 100% 55%);
     overflow: hidden;
+    z-index: 1;
 }
 
-.diagonal:nth-child(2) {
-    top: -15%;
-}
-
-.diagonal:nth-child(3) {
+.diagonal:hover::before {
+    content: 'My Passions';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 3;
     top: 0%;
-}
-
-.diagonal:nth-child(4) {
-    top: 15%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add semi-transparent background */
+    color: white;
+    /* Text color */
 }
 
 .diagonal img {
@@ -75,16 +114,74 @@
     object-fit: cover;
 }
 
-.about-me-landing {
-    position: relative;
-    background-color: transparent;
-    backdrop-filter: blur(0.2rem);
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: left;
+.where-from,
+.passions,
+.goals {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     width: 100%;
-    z-index: 24;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    transform: translate(-50%, -50%) scale(0.8);
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.where-from h2,
+.passions h2,
+.goals h2 {
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+.where-from p,
+.passions p,
+.goals p {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 3px rgba(134, 134, 134, 0.534);
+    padding: 3rem;
+    text-align: start;
+    border-radius: 10px;
+    height: 75%;
+    width: 75%;
+}
+
+.where-from button,
+.passions button,
+.goals button {
+    position: absolute;
+    top: 3rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-left: calc(100% - 9rem);
+    cursor: pointer;
+}
+
+.where-from.visible,
+.passions.visible,
+.goals.visible {
+    opacity: 1;
+    z-index: 7;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 768px) {
+
+    .top-left:hover::before,
+    .bottom-right:hover::before {
+        font-size: 1rem;
+    }
+
 }

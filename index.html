@@ -66,31 +66,63 @@
                                 class="fa-solid fa-arrow-left"></i>Hobbies</button>
                     </div>
                     <div class="about-me">
-                        <div class="about-me-landing">
-                            <div class="triangles">
-                                <div class="corner top-right">
-                                    <img src="./img/DSC_0137_1.jpg" alt="Profile 1">
-                                </div>
-                                <div class="diagonal">
-                                    <img src="./img/Cardinal.jpg" alt="Profile 1">
-                                </div>
-                                <div class="diagonal">
-                                    <img src="./img/DSC_0137_1.jpg" alt="Profile 2">
-                                </div>
-                                <div class="diagonal">
-                                    <img src="./img/Loon Blue Water.jpg" alt="Profile 3">
-                                </div>
-                                <div class="corner bottom-left">
-                                    <img src="./img/DSC_0137_1.jpg" alt="Profile 4">
-                                </div>
+                        <div class="triangles">
+                            <div class="corner top-left" onclick="showAboutMe('where-from')">
+                                <img src="./img/indy.jpg" alt="Profile 1">
+                            </div>
+                            <div class="diagonal" onclick="showAboutMe('passions')">
+                                <img src="./img/nature.jpg" alt="Profile 1">
+                            </div>
+                            <div class="corner bottom-right" onclick="showAboutMe('goals')">
+                                <img src="./img/goals.jpg" alt="Profile 4">
+                            </div>
+                        </div>
+                        <div class="about-me-topics">
+                            <div class="where-from">
+                                <button onclick="hideAboutMe('where-from')"><i class="fa-solid fa-close"></i></button>
+                                <h2>Where I'm From</h2>
+                                <p>
+                                    I grew up in Plainfield, Indiana, having gone to Avon High School. I then went to
+                                    Indiana University, where I got my Bachelor's and Master's degrees. I now live in a suburb
+                                    of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions Architect.
+                                    While having spent my life in Indiana, I have traveled to many places, including
+                                    many other states, Israel, and doing an internship in Australia for a summer.
+                                </p>
+                            </div>
+                            <div class="passions">
+                                <button onclick="hideAboutMe('passions')"><i class="fa-solid fa-close"></i></button>
+                                <h2>What are my passions?</h2>
+                                <p>
+                                    1. Faith. My faith is the most important thing in my life. I strive to live my life in a way that
+                                    lives out my faith and its foundational principles.
+                                    2. People. This is number one because my greatest passion is to pour into people and help them become
+                                    the best version of themselves.<br>
+                                    3. Nature. I love being outside. The beauty of nature is second to none and feeling the breeze as I walk
+                                    through the wonder of nature gives me more life than anything else.<br>
+                                    4. Learning. I love learning new things. I love to build as I often see the results of what I am learning
+                                    in a very tangible way. This can be building websites, woodworking, or even just some yard work.<br>
+                                    5. Family. Family is what gets me out of bed in the morning. I wake up
+                                    every day to my favorite people.
+                                </p>
+                            </div>
+                            <div class="goals">
+                                <button onclick="hideAboutMe('goals')"><i class="fa-solid fa-close"></i></button>
+                                <h2>What are my goals?</h2>
+                                <p>
+                                    1. I strive to honor G-d with my life.
+                                    2. I strive to live out my family's guiding principals.
+                                    3. I strive to be the best husband and father I can be.
+                                    4. I strive to be a leader who pours into others and helps them grow.
+                                    5. I strive to be a person who is known for their integrity and honesty.
+                                    6. I strive to be patient and kind, quick to listen, and empathetic.
+                                    7. I strive to use my life to truly help as many people as I can.
+                                </p>
                             </div>
                         </div>
                         <!-- <p>
                             1. Where I'm from<br>
                             2. What are my passions<br>
                             3. What are my goals<br>
-                            4. What are my skills<br>
-                            5. What are my interests<br>
                         </p> -->
                     </div>
                     <div class="side-nav-right">
@@ -143,8 +175,8 @@
                             <div class="explanations">
                                 <div class="ownership-explanation">
                                     <button onclick="hideBook('ownership')"><i class="fa-solid fa-close"></i></button>
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
                                         1. Own everything you can as it enables you to control what you can<br>
                                         2. You need to lead up the chain of command as well<br>
                                         3. There are no bad teams, only bad leaders<br>
@@ -155,9 +187,8 @@
 
                                 <div class="habits-explanation">
                                     <button onclick="hideBook('habits')"><i class="fa-solid fa-close"></i></button>
-
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
                                         1. Make it obvious, attractive, easy, and satisfying<br>
                                         2. Reverse #1 to break bad habits<br>
                                         3. Habits only need two minutes to start being built<br>
@@ -168,9 +199,8 @@
 
                                 <div class="wrong-explanation">
                                     <button onclick="hideBook('wrong')"><i class="fa-solid fa-close"></i></button>
-
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
                                         1. Being wrong often leads to new discoveries<br>
                                         2. People often are scared of being wrong, which is elevated in groups </br>
                                         3. Being wrong is a strength if you use it to learn new things and connect
@@ -183,10 +213,9 @@
 
                                 <div class="growth-explanation">
                                     <button onclick="hideBook('growth')"><i class="fa-solid fa-close"></i></button>
-
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
-                                        1. Growth requires intentionality<br>
+                                        \ 1. Growth requires intentionality<br>
                                         2. Growth requires personal reflection<br>
                                         3. Growth requires stretching beyond your comfort zone<br>
                                         4. Pain and hardship, if harnessed, can lead to growth<br>
@@ -196,9 +225,8 @@
 
                                 <div class="dare-explanation">
                                     <button onclick="hideBook('dare')"><i class="fa-solid fa-close"></i></button>
-
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
                                         1. Vulnerability is not weakness<br>
                                         2. Courage is not the absence of fear<br>
                                         3. A good leader is willing to rumble<br>
@@ -209,9 +237,8 @@
 
                                 <div class="leadership-explanation">
                                     <button onclick="hideBook('leadership')"><i class="fa-solid fa-close"></i></button>
-
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
                                         1. Leadership requires growing relationships and building relationship
                                         capital<br>
                                         2. Success is limited by a leader's abilities, and those are grown with
@@ -224,9 +251,8 @@
 
                                 <div class="lotr-explanation">
                                     <button onclick="hideBook('lotr')"><i class="fa-solid fa-close"></i></button>
-
+                                    <h2>Key Takeaways:</h2>
                                     <p>
-                                        <strong>Key Takeaways:</strong><br>
                                         1. Even the things een as insignificant have immense power<br>
                                         2. The desire for good, if untamed, can lead to back outcomes<br>
                                         3. A leader is humble, but not self-effacing with serving others<br>

@@ -92,3 +92,28 @@ const hideBook = (book) => {
     });
   }
 }
+
+const showAboutMe = (name) => {
+  const aboutMeDiv = document.querySelector(`.${name}`);
+  const gridDivs = document.querySelectorAll('.triangles');
+  if (aboutMeDiv) {
+    aboutMeDiv.classList.add('visible');
+    gridDivs.forEach(div => {
+      div.style.filter = 'blur(5px)';
+      div.style.pointerEvents = 'none';
+    });
+  }
+}
+
+const hideAboutMe = (name) => {
+  const aboutMeDiv = document.querySelector(`.${name}`);
+  const gridDivs = document.querySelectorAll('.triangles');
+
+  if (aboutMeDiv) {
+    aboutMeDiv.classList.remove('visible');
+    gridDivs.forEach(div => {
+      div.style.filter = 'none';
+      div.style.pointerEvents = 'all';
+    });
+  }
+}
