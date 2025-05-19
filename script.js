@@ -117,3 +117,20 @@ const hideAboutMe = (name) => {
     });
   }
 }
+
+adjustPhotos() = () => {
+  const photos = document.querySelectorAll('.photo-gallery .photo');
+  const positions = [
+    { translateX: '-30%', rotate: '180deg' },
+    { translateX: '-15%', rotate: '135deg' },
+    { translateX: '0%', rotate: '90deg' },
+    { translateX: '15%', rotate: '45deg' },
+    { translateX: '30%', rotate: '0deg' }
+  ];
+
+  photos.forEach((photo, index) => {
+    if (index < positions.length) {
+      photo.style.transform = `translateX(${positions[index].translateX}) rotate(${positions[index].rotate})`;
+    }
+  });
+}

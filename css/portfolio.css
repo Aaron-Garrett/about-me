@@ -1,0 +1,131 @@
+.portfolio {
+    display: flex;  /* Add this */
+    flex-direction: column;
+    height: 80%;
+    max-height: 80%; /* Add this */
+    overflow: auto; /* Add this to handle overflow content */
+    border: 3px solid teal;
+}
+
+/* Make iframe responsive */
+.website img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.website {
+    position: relative;  /* Add this to position the pseudo-element */
+    cursor: pointer;     /* Add pointer cursor */
+    width: 100%;
+}
+
+.portfolio-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+}
+
+.portfolio-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+}
+
+.work-demos {
+    width: 50%;
+    height: 100%;
+}
+
+.photos {
+    width: 100%;
+    height: 100%;
+}
+
+/* Add this to set the photo gallery container */
+.photo-gallery {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+.link {
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style for individual photos */
+.photo {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 0;
+    left: 50%;
+    transform-origin: center center;
+    transition: all 0.5s ease-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Initial stacked position with skewed angle */
+.photo:nth-child(1) {
+    transform: translateX(-50%) rotate(-30deg) translateY(-20px);
+    z-index: 3;
+}
+
+.photo:nth-child(2) {
+    transform: translateX(-50%) rotate(-15deg) translateY(-10px);
+    z-index: 2;
+}
+
+.photo:nth-child(3) {
+    transform: translateX(-50%) rotate(0deg) translateY(0);
+    z-index: 1;
+}
+
+.photo:nth-child(4) {
+    transform: translateX(-50%) rotate(15deg) translateY(10px);
+    z-index: 0;
+}
+
+.photo:nth-child(5) {
+    transform: translateX(-50%) rotate(30deg) translateY(20px);
+    z-index: -1;
+}
+.photo-gallery:hover .photo:nth-child(1) {
+    transform: translateX(-150%) rotate(-30deg);
+}
+
+.photo-gallery:hover .photo:nth-child(2) {
+    transform: translateX(-100%) rotate(-15deg) translateY(30%);
+}
+
+.photo-gallery:hover .photo:nth-child(3) {
+    transform: translateX(-50%) rotate(0deg) translateY(-45%);
+    z-index: 9;
+}
+
+.photo-gallery:hover .photo:nth-child(4) {
+    transform: translateX(0%) rotate(15deg) translateY(30%);
+}
+
+.photo-gallery:hover .photo:nth-child(5) {
+    transform: translateX(50%) rotate(30deg);
+}
+
+/* Images inside photo containers */
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}

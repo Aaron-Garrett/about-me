@@ -1,0 +1,22 @@
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    grid-template-areas:
+        "photo-1 photo-2 photo-3"
+        "photo-4 photo-5 photo-6";
+    padding: 1rem;
+
+}
+
+.hobby-photo {
+    cursor: pointer;
+}
+
+.hobby-photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}

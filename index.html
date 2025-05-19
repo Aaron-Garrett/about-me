@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/education.css">
     <link rel="stylesheet" type="text/css" href="css/book-list.css">
     <link rel="stylesheet" type="text/css" href="css/about-me.css">
+    <link rel="stylesheet" type="text/css" href="css/hobbies.css">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     <script src="script.js"></script>
     <script src="cube-move.js"></script>
 </head>
@@ -83,8 +85,10 @@
                                 <h2>Where I'm From</h2>
                                 <p>
                                     I grew up in Plainfield, Indiana, having gone to Avon High School. I then went to
-                                    Indiana University, where I got my Bachelor's and Master's degrees. I now live in a suburb
-                                    of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions Architect.
+                                    Indiana University, where I got my Bachelor's and Master's degrees. I now live in a
+                                    suburb
+                                    of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions
+                                    Architect.
                                     While having spent my life in Indiana, I have traveled to many places, including
                                     many other states, Israel, and doing an internship in Australia for a summer.
                                 </p>
@@ -93,14 +97,19 @@
                                 <button onclick="hideAboutMe('passions')"><i class="fa-solid fa-close"></i></button>
                                 <h2>What are my passions?</h2>
                                 <p>
-                                    1. Faith. My faith is the most important thing in my life. I strive to live my life in a way that
+                                    1. Faith. My faith is the most important thing in my life. I strive to live my life
+                                    in a way that
                                     lives out my faith and its foundational principles.
-                                    2. People. This is number one because my greatest passion is to pour into people and help them become
+                                    2. People. This is number one because my greatest passion is to pour into people and
+                                    help them become
                                     the best version of themselves.<br>
-                                    3. Nature. I love being outside. The beauty of nature is second to none and feeling the breeze as I walk
+                                    3. Nature. I love being outside. The beauty of nature is second to none and feeling
+                                    the breeze as I walk
                                     through the wonder of nature gives me more life than anything else.<br>
-                                    4. Learning. I love learning new things. I love to build as I often see the results of what I am learning
-                                    in a very tangible way. This can be building websites, woodworking, or even just some yard work.<br>
+                                    4. Learning. I love learning new things. I love to build as I often see the results
+                                    of what I am learning
+                                    in a very tangible way. This can be building websites, woodworking, or even just
+                                    some yard work.<br>
                                     5. Family. Family is what gets me out of bed in the morning. I wake up
                                     every day to my favorite people.
                                 </p>
@@ -119,11 +128,6 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- <p>
-                            1. Where I'm from<br>
-                            2. What are my passions<br>
-                            3. What are my goals<br>
-                        </p> -->
                     </div>
                     <div class="side-nav-right">
                         <button class="control book-list-button"
@@ -300,13 +304,54 @@
                             <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                     <div class="portfolio">
-                        <p>
-                            1. Websites
-                            2. Eli Lilly Demos
-                            3. Photos
-                            4. Summary of projects at Eli Lilly
-                        </p>
+                        <div class="portfolio-top">
+                            <div class="website">
+                                <div class="website-link">
+                                    <h2>My Websites</h2>
+                                    <a href="https://aaron-garrett.github.io/batjew_apologetics" target="_blank">
+                                        <img src="./img/website.png" alt="Batjew Apologetics">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-bottom">
+                            <!-- <div class="work-demos">
+                                <div class="demo">
+                                    <h2>My Work Demos</h2>
+                                    <p>PLACEHOLDER!</p>
+                                </div>
+                            </div> -->
+                            <div class="photos">
+                                <h2>My Photos</h2>
+                                <a href="gallery_placeholder" target="_blank">
+                                    <div class="photo-gallery" onmouseover="adjustPhotos()">
+                                        <div class="photo">
+                                            <img src="./img/Cardinal.jpg" alt="Cardinal">
+                                        </div>
+                                        <div class="photo">
+                                            <img src="./img/Eagle_Carrying_Fish_Cropped.jpg"
+                                                alt="Eagle Carrying a Fish">
+                                        </div>
+                                        <div class="photo">
+                                            <img src="./img/Eagle in a Dead Tree PT 3.jpg" alt="Eagle Eye">
+                                        </div>
+                                        <div class="photo">
+                                            <img src="./img/DSC_0389.jpg" alt="Eagle Eye">
+                                        </div>
+                                        <div class="photo">
+                                            <img src="./img/Loon Blue Water.jpg" alt="Eagle Eye">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- <p>
+                        1. Websites
+                        2. Eli Lilly Demos
+                        3. Photos
+                        4. Summary of projects at Eli Lilly
+                    </p> -->
                     <div class="bottom-nav">
                         <button class="control education-button"
                             onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); rotateDown()">My Education <i
@@ -446,7 +491,27 @@
                                 class="fa-solid fa-arrow-left"></i>Book List</button>
                     </div>
                     <div class="hobbies">
-                        <p>
+                        <div class="hobbies-grid">
+                            <div class="hobby-photo" style="grid-area: photo-1">
+                                <img src="./img/hiking.jpg" alt="Hiking">
+                            </div>
+                            <div class="hobby-photo" style="grid-area: photo-2">
+                                <img src="./img/fishing.jpg" alt="Fishing">
+                            </div>
+                            <div class="hobby-photo" style="grid-area: photo-3">
+                                <img src="./img/photography.jpg" alt="Photography">
+                            </div>
+                            <div class="hobby-photo" style="grid-area: photo-4">
+                                <img src="./img/writing.jpg" alt="Writing">
+                            </div>
+                            <div class="hobby-photo" style="grid-area: photo-5">
+                                <img src="./img/reading.jpg" alt="Reading">
+                            </div>
+                            <div class="hobby-photo" style="grid-area: photo-6">
+                                <img src="./img/scuba.jpg" alt="SCUBA">
+                                </div>
+                        </div>
+                        <!-- <p>
                             1. Hiking<br>
                             2. Fishing<br>
                             3. Photography<br>
@@ -454,7 +519,7 @@
                             5. Writing<br>
                             6. Reading<br>
 
-                        </p>
+                        </p> -->
                     </div>
                     <div class="side-nav-right">
                         <button class="control about-me-button"
