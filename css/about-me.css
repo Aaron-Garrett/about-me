@@ -179,9 +179,59 @@
 
 @media screen and (max-width: 768px) {
 
-    .top-left:hover::before,
-    .bottom-right:hover::before {
+    .top-left::before {
+        content: 'Where I\'m From';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding-top: 12%;
         font-size: 1rem;
+        z-index: 7;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Add semi-transparent background */
+        color: white;
+        /* Text color */
+    }
+
+    .bottom-right::before {
+        content: 'My Goals';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        z-index: 7;
+        top: 35%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Add semi-transparent background */
+        color: white;
+        /* Text color */
+    }
+
+    .diagonal::before {
+        content: 'My Passions';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        z-index: 3;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Add semi-transparent background */
+        color: white;
+        /* Text color */
     }
 
 }

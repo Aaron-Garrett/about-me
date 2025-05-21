@@ -110,13 +110,16 @@
     .top,
     .bottom {
         grid-template-columns: 10% 80% 10%;
+        border: solid 1px teal;
     }
 
     .side-nav-right {
+        border: 1px solid purple;
         padding-right: 1.75rem;
     }
 
     .side-nav-left {
+        border: 1px solid purple;
         justify-self: start;
         padding: 0;
     }
@@ -128,5 +131,14 @@
 
     .bottom-nav {
         padding-bottom: 1.5rem;
+    }
+
+    .left-cube .about-me,
+    .right-cube .book-list,
+    .back-cube .hobbies,
+    .top .portfolio,
+    .bottom .education {
+        border: solid 1px limegreen;
+        margin: 0;
     }
 }
