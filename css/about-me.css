@@ -234,4 +234,40 @@
         /* Text color */
     }
 
+    .where-from h2,
+    .passions h2,
+    .goals h2 {
+        color: black;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .where-from button,
+    .passions button,
+    .goals button {
+        position: absolute;
+        top: 2rem;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-left: calc(100% - 3rem);
+        cursor: pointer;
+    }
+
+    .where-from p,
+    .passions p,
+    .goals p {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: solid 3px rgba(134, 134, 134, 0.534);
+        font-size: 0.8rem;
+        padding: .5rem;
+        text-align: start;
+        border-radius: 10px;
+        height: 75%;
+        width: 75%;
+    }
+
 }
