@@ -203,4 +203,26 @@
         background: rgba(255, 255, 255, 0.4);
         border-radius: 10px;
     }
+
+    .ownership-explanation p,
+    .habits-explanation p,
+    .leadership-explanation p,
+    .dare-explanation p,
+    .growth-explanation p,
+    .wrong-explanation p,
+    .lotr-explanation p {
+        font-size: .8rem;
+        padding: .5rem;
+        overflow-y: auto;
+    }
+
+    .ownership-explanation h2,
+    .habits-explanation h2,
+    .leadership-explanation h2,
+    .dare-explanation h2,
+    .growth-explanation h2,
+    .wrong-explanation h2,
+    .lotr-explanation h2 {
+        font-size: 1.5rem;
+    }
 }
