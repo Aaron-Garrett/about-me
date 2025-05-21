@@ -151,10 +151,11 @@
         display: flex;
         overflow-x: auto;
         flex-wrap: nowrap;
+        width: 100%;
     }
 
     .hobby-photo {
-        width: 90%;
+        min-width: 90%;
         min-height: 100%;
     }
 
