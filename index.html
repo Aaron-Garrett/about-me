@@ -306,11 +306,12 @@
                     <div class="portfolio">
                         <div class="portfolio-top">
                             <div class="website">
+                                <div class="img-description"><a
+                                        href="https://aaron-garrett.github.io/batjew_apologetics"
+                                        target="_blank">Website Demo</a></div>
                                 <div class="website-link">
                                     <h2>My Websites</h2>
-                                    <a href="https://aaron-garrett.github.io/batjew_apologetics" target="_blank">
-                                        <img src="./img/website.png" alt="Batjew Apologetics">
-                                    </a>
+                                    <img src="./img/website.png" alt="Batjew Apologetics">
                                 </div>
                             </div>
                         </div>
@@ -492,24 +493,85 @@
                     </div>
                     <div class="hobbies">
                         <div class="hobbies-grid">
-                            <div class="hobby-photo" style="grid-area: photo-1">
+                            <div class="hobby-photo hiking" style="grid-area: photo-1" onclick="showHobby('hiking')">
                                 <img src="./img/hiking.jpg" alt="Hiking">
                             </div>
-                            <div class="hobby-photo" style="grid-area: photo-2">
+                            <div class="hobby-photo fishing" style="grid-area: photo-2" onclick="showHobby('fishing')">
                                 <img src="./img/fishing.jpg" alt="Fishing">
                             </div>
-                            <div class="hobby-photo" style="grid-area: photo-3">
+                            <div class="hobby-photo photography" style="grid-area: photo-3" onclick="showHobby('photography')">
                                 <img src="./img/photography.jpg" alt="Photography">
                             </div>
-                            <div class="hobby-photo" style="grid-area: photo-4">
-                                <img src="./img/writing.jpg" alt="Writing">
+                            <div class="hobby-photo writing" style="grid-area: photo-4" onclick="showHobby('writing')">
+                                <img src="./img/writing.jpeg" alt="Writing">
                             </div>
-                            <div class="hobby-photo" style="grid-area: photo-5">
-                                <img src="./img/reading.jpg" alt="Reading">
+                            <div class="hobby-photo reading" style="grid-area: photo-5" onclick="showHobby('reading')">
+                                <img src="./img/reading.jpeg" alt="Reading">
                             </div>
-                            <div class="hobby-photo" style="grid-area: photo-6">
+                            <div class="hobby-photo scuba" style="grid-area: photo-6" onclick="showHobby('scuba')">
                                 <img src="./img/scuba.jpg" alt="SCUBA">
-                                </div>
+                            </div>
+                        </div>
+                        <div class="hobby-explanations">
+                            <div class="hiking-explanation">
+                                <button onclick="hideHobby('hiking')"><i class="fa-solid fa-close"></i></button>
+                                <h2>Hiking</h2>
+                                <p>
+                                    Hiking is one of my most life-giving hobbies. Being outside in forests, creeks, or
+                                    anywhere else that I can bask in the beauty of nature is my happy place. It really
+                                    is as simple as that.
+                                </p>
+                            </div>
+                            <div class="fishing-explanation">
+                                <button onclick="hideHobby('fishing')"><i class="fa-solid fa-close"></i></button>
+                                <h2>Fishing</h2>
+                                <p>
+                                    I find fishing to be either medatative or an excellent bonding experience. I can
+                                    sit there in silence for hours, enjoying the sun and the water, or I can be with
+                                    friends and family, laughing and joking as we wait on the next bite. Some of the best
+                                    days fishing happen even when you don't catch anything.
+                                </p>
+                            </div>
+                            <div class="photography-explanation">
+                                <button onclick="hideHobby('photography')"><i class="fa-solid fa-close"></i></button>
+                                <h2>Photography</h2>
+                                <p>
+                                    Photography is not just a creative outlet for me. It is an opportunity to learn and master
+                                    new skills with a camera, drone, and editing software. I love the fact that it quite literally
+                                    encourages me to look at things from different perspectives and challenges me to look beyond the
+                                    initial appearance. It helps give me a tangible reminder of the depth that lies just under
+                                    the surface and the power of intentionality.
+                                </p>
+                            </div>
+                            <div class="writing-explanation">
+                                <button onclick="hideHobby('writing')"><i class="fa-solid fa-close"></i></button>
+                                <h2>Writing</h2>
+                                <p>
+                                    Writing is a chance for me to get my thoughts down. These may take the form of a journal, a written prayer,
+                                    an essay about something I am passionate about, or even a fictional story. I love the opportunity to process
+                                    my thoughts and then wrestle them into something cohesive, concise, and comprehensible.
+                                </p>
+                            </div>
+                            <div class="reading-explanation">
+                                <button onclick="hideHobby('reading')"><i class="fa-solid fa-close"></i></button>
+                                <h2>Reading</h2>
+                                <p>
+                                    Reading is a chance for me to learn and grow as well as an opportunity to relax and escape.
+                                    I have found that I am able to do all four reading or listening to fiction and non-fiction.
+                                    I find fiction has lessons that it teaches through its world and characters and non-fiction can create a
+                                    space for me to lean into and embrace as it creates illustrations of the past and lessons we can learn.
+                                </p>
+                            </div>
+                            <div class="scuba-explanation">
+                                <button onclick="hideHobby('scuba')"><i class="fa-solid fa-close"></i></button>
+                                <h2>SCUBA Diving</h2>
+                                <p>
+                                    SCUBA diving feels like home. I love the water and I always have. Being submerged and witnessing the beauty of
+                                    underwater life is a gift. If I had enough air, I could stay down for hours, just watching the ecosystem
+                                    around me. I love seeing the fish exhibit their natural behaviors and, much like hiking, basking in the
+                                    beauty of nature.
+                                </p>
+                            </div>
                         </div>
                         <!-- <p>
                             1. Hiking<br>

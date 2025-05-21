@@ -1,6 +1,7 @@
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
     gap: 20px;
     grid-template-areas:
         "photo-1 photo-2 photo-3"
@@ -11,12 +12,150 @@
 
 .hobby-photo {
     cursor: pointer;
+    position: relative;
 }
 
-.hobby-photo img{
+.hobby-photo:hover::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.hiking:hover::before {
+    content: "Hiking";
+}
+
+.fishing:hover::before {
+    content: "Fishing";
+}
+
+.photography:hover::before {
+    content: "Photography";
+}
+
+.writing:hover::before {
+    content: "Writing";
+}
+
+.reading:hover::before {
+    content: "Reading";
+}
+
+.scuba:hover::before {
+    content: "SCUBA Diving";
+}
+
+.hobby-photo img {
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     object-fit: cover;
+}
+
+.hiking-explanation,
+.fishing-explanation,
+.photography-explanation,
+.writing-explanation,
+.reading-explanation,
+.scuba-explanation {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: -3;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    pointer-events: all;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.hiking-explanation.visible,
+.fishing-explanation.visible,
+.photography-explanation.visible,
+.writing-explanation.visible,
+.reading-explanation.visible,
+.scuba-explanation.visible {
+    opacity: 1;
+    z-index: 7;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hiking-explanation button,
+.fishing-explanation button,
+.photography-explanation button,
+.writing-explanation button,
+.reading-explanation button,
+.scuba-explanation button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.hiking-explanation p,
+.fishing-explanation p,
+.photography-explanation p,
+.writing-explanation p,
+.reading-explanation p,
+.scuba-explanation p {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 3px rgba(134, 134, 134, 0.534);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: start;
+    height: 75%;
+    width: 75%;
+}
+
+.hiking-explanation h2,
+.fishing-explanation h2,
+.photography-explanation h2,
+.writing-explanation h2,
+.reading-explanation h2,
+.scuba-explanation h2 {
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hobbies-grid {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .hobby-photo {
+        width: 100%;
+        height: 100%;
+    }
+
 }

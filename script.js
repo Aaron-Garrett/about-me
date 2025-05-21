@@ -118,6 +118,33 @@ const hideAboutMe = (name) => {
   }
 }
 
+const showHobby = (name) => {
+  console.log('showHobby called with name:', name); // Debugging line
+  const aboutMeDiv = document.querySelector(`.${name}-explanation`);
+  console.log('aboutMeDiv:', aboutMeDiv); // Debugging line
+  const gridDivs = document.querySelectorAll('.hobby-photo');
+  if (aboutMeDiv) {
+    aboutMeDiv.classList.add('visible');
+    gridDivs.forEach(div => {
+      div.style.filter = 'blur(5px)';
+      div.style.pointerEvents = 'none';
+    });
+  }
+}
+
+const hideHobby = (name) => {
+  const aboutMeDiv = document.querySelector(`.${name}-explanation`);
+  const gridDivs = document.querySelectorAll('.hobby-photo');
+
+  if (aboutMeDiv) {
+    aboutMeDiv.classList.remove('visible');
+    gridDivs.forEach(div => {
+      div.style.filter = 'none';
+      div.style.pointerEvents = 'all';
+    });
+  }
+}
+
 adjustPhotos() = () => {
   const photos = document.querySelectorAll('.photo-gallery .photo');
   const positions = [
