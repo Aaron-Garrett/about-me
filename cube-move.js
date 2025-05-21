@@ -1,11 +1,31 @@
 let rotationX = 0;
 let rotationY = 0;
 
+function addTouchSupport() {
+    const buttons = document.querySelectorAll('.control');
+
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', function (e) {
+            e.stopPropagation(); // Stop event bubbling
+
+            // Extract the function name from onclick attribute
+            const onclickAttr = this.getAttribute('onclick');
+            if (onclickAttr) {
+                // Execute the function
+                eval(onclickAttr);
+            }
+        });
+    });
+}
+
+// Call this when the page loads
+window.addEventListener('DOMContentLoaded', addTouchSupport);
+
 function rotateLeft() {
-    if (rotationY % 360 === 0 && rotationX % 360  === 0) {
+    if (rotationY % 360 === 0 && rotationX % 360 === 0) {
         rotationY += 90;
     }
-    
+
     if (rotationY % 360 === -90) {
         rotationY += 180;
     }
@@ -34,7 +54,7 @@ function rotateLeft() {
 }
 
 function rotateRight() {
-    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
+    if (rotationY % 360 === 0 && rotationX % 360 === 0) {
         rotationY -= 90; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === 90) {
@@ -65,7 +85,7 @@ function rotateRight() {
 }
 
 function rotateUp() {
-    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
+    if (rotationY % 360 === 0 && rotationX % 360 === 0) {
         rotationX -= 90; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === -90) {
@@ -99,7 +119,7 @@ function rotateUp() {
 }
 
 function rotateDown() {
-    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
+    if (rotationY % 360 === 0 && rotationX % 360 === 0) {
         rotationX += 90; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === -90) {
@@ -133,7 +153,7 @@ function rotateDown() {
 }
 
 function rotateBack() {
-    if (rotationY % 360  === 0 && rotationX % 360  === 0) {
+    if (rotationY % 360 === 0 && rotationX % 360 === 0) {
         rotationY += 180; // Reset to 360 degrees to avoid negative values
     }
     if (rotationY % 360 === -90) {

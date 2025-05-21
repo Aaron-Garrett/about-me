@@ -1,3 +1,23 @@
+function addTouchSupport() {
+  const buttons = document.querySelectorAll('.control');
+
+  buttons.forEach(button => {
+    button.addEventListener('touchstart', function (e) {
+      e.stopPropagation(); // Stop event bubbling
+
+      // Extract the function name from onclick attribute
+      const onclickAttr = this.getAttribute('onclick');
+      if (onclickAttr) {
+        // Execute the function
+        eval(onclickAttr);
+      }
+    });
+  });
+}
+
+// Call this when the page loads
+window.addEventListener('DOMContentLoaded', addTouchSupport);
+
 const toggleNav = () => {
   setTimeout(() => {
     document.body.classList.add('open');
