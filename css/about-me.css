@@ -265,6 +265,7 @@
         font-size: 0.8rem;
         padding: .5rem;
         text-align: start;
+        overflow-y: auto;
         border-radius: 10px;
         height: 75%;
         width: 75%;
