@@ -144,17 +144,3 @@
     margin-top: .25rem;
     margin-bottom: 0;
 }
-
-@media screen and (max-width: 768px) {
-    .hobbies-grid {
-        display: flex;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-    }
-
-    .hobby-photo {
-        width: 100%;
-        height: 100%;
-    }
-
-}

@@ -142,8 +142,8 @@ main {
 
 @media (max-width: 768px) {
     .cube-container {
-        width: 80vw;
-        height: 80vw;
+        width: 72vw;
+        height: 72vw;
         perspective: 800px;
     }
 
@@ -203,7 +203,7 @@ main {
         font-size: clamp(8px, 1rem, 24px);
     }
 
-    /* Faces of the cube */
+    /* Faces of the cube
     .cube .face {
         position: absolute;
         width: 100%;
@@ -219,7 +219,7 @@ main {
         transform-origin: center;
         overflow: hidden;
         /* Add this to contain content */
-        padding: 0;
+        /* padding: 0; */
         /* Remove padding that was causing overflow */
-    }
+    } */
 }

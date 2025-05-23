@@ -59,7 +59,8 @@
     grid-row: 3;
     grid-column: 2;
     justify-self: center;
-    align-self: start;}
+    align-self: start;
+}
 
 .top-nav {
     grid-row: 1;
@@ -75,7 +76,8 @@
     justify-self: end;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    max-height: 80%;}
+    max-height: 80%;
+}
 
 .side-nav-right {
     grid-row: 2;
@@ -85,4 +87,25 @@
     padding-right: .5rem;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    max-height: 80%;}
+    max-height: 80%;
+}
+
+@media (max-width: 768px) {
+
+    .left-cube,
+    .right-cube,
+    .back-cube,
+    .top,
+    .bottom {
+        display: grid;
+        grid-template-rows: 10% 80% 10%;
+        grid-template-columns: 10% 80% 10%;
+        position: relative;
+        inset: 0;
+        background-color: transparent;
+        backdrop-filter: blur(0.2rem);
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
+}
