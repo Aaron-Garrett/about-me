@@ -132,8 +132,6 @@
     text-align: start;
     height: 75%;
     width: 75%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 .hiking-explanation h2,
@@ -153,55 +151,11 @@
         display: flex;
         overflow-x: auto;
         flex-wrap: nowrap;
-        width: 100%;
     }
 
     .hobby-photo {
-        min-width: 90%;
-        min-height: 85%;
-    }
-
-    .hobby-photo img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
     }
 
-    .hobby-photo::before {
-        content: "";
-        position: absolute;
-        display: flex;
-        font-size: 2rem;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.65);
-    }
-
-    .hiking::before {
-        content: "Hiking";
-    }
-
-    .fishing::before {
-        content: "Fishing";
-    }
-
-    .photography::before {
-        content: "Photography";
-    }
-
-    .writing::before {
-        content: "Writing";
-    }
-
-    .reading::before {
-        content: "Reading";
-    }
-
-    .scuba::before {
-        content: "SCUBA Diving";
-    }
 }
