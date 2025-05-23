@@ -4,7 +4,6 @@
     height: 80%;
     max-height: 80%; /* Add this */
     overflow: auto; /* Add this to handle overflow content */
-    border: 3px solid teal;
 }
 
 /* Make iframe responsive */

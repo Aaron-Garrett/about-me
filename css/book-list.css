@@ -94,10 +94,8 @@
 .wrong-explanation button,
 .lotr-explanation button {
     position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 3rem;
-    margin-top: 1rem;
+    top: 20%;
+    right: 20%;
     background-color: transparent;
     border: none;
     color: white;
@@ -133,5 +131,4 @@
     color: black;
     text-align: center;
     width: 100%;
-    margin: 0;
 }
