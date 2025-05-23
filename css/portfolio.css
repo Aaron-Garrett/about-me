@@ -1,9 +1,13 @@
 .portfolio {
-    display: flex;  /* Add this */
+    display: flex;
+    /* Add this */
     flex-direction: column;
-    height: 80%;
-    max-height: 80%; /* Add this */
-    overflow: auto; /* Add this to handle overflow content */
+    height: 100%;
+    max-height: 100%;
+    /* Add this */
+    overflow: auto;
+    /* Add this to handle overflow content */
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 /* Make iframe responsive */
@@ -13,8 +17,10 @@
 }
 
 .website {
-    position: relative;  /* Add this to position the pseudo-element */
-    cursor: pointer;     /* Add pointer cursor */
+    position: relative;
+    /* Add this to position the pseudo-element */
+    cursor: pointer;
+    /* Add pointer cursor */
     width: 100%;
 }
 
@@ -25,10 +31,11 @@
     width: 100%;
     height: 50%;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 .img-description {
-    content: "Website Demo";
+    content: "Click to View Demo Website";
     position: absolute;
     top: 0;
     left: 0;
@@ -38,20 +45,15 @@
     width: 100%;
     height: 100%;
     text-decoration: underline;
-    color: white;
+    color: black;
     font-size: clamp(8px, 1rem, 24px);
-}
-
-.img-description a {
-    text-decoration: none;
-    color: white;
 }
 
 .portfolio-bottom {
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.65);
     width: 100%;
     height: 50%;
 }
@@ -63,36 +65,43 @@
 
 .photos {
     width: 100%;
+    position: relative;
     height: 100%;
+}
+
+.photos h2,
+.website h2 {
+    color: black;
+    text-align: start;
+    font-size: clamp(8px, 1.5rem, 24px);
+    margin: 0;
+    padding: 0;
+}
+
+.photos h2 {
+    margin-left: 10px;
+    margin-top: 1rem;
+    text-decoration: underline;
 }
 
 /* Add this to set the photo gallery container */
 .photo-gallery {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 100%;
     perspective: 1000px;
-    margin: 20px auto;
-}
-
-.link {
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-size: clamp(8px, 1rem, 24px);
-    font-weight: bold;
-    text-align: center;
 }
 
 /* Style for individual photos */
 .photo {
     position: absolute;
-    width: 200px;
-    height: 150px;
-    top: 0;
+    width: 125px;
+    height: 75px;
+    top: calc(50% - 32.5px);
     left: 50%;
     transform-origin: center center;
     transition: all 0.5s ease-out;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -122,6 +131,7 @@
     transform: translateX(-50%) rotate(30deg) translateY(20px);
     z-index: -1;
 }
+
 .photo-gallery:hover .photo:nth-child(1) {
     transform: translateX(-150%) rotate(-30deg);
 }

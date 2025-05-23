@@ -107,15 +107,12 @@
 .reading-explanation button,
 .scuba-explanation button {
     position: absolute;
+    background-color: transparent;
     top: 0;
     right: 0;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     font-size: 1.5rem;
-    padding: 1rem;
     cursor: pointer;
 }
 
@@ -143,7 +140,7 @@
 .scuba-explanation h2 {
     color: black;
     text-align: center;
-    width: 100%;
+    max-width: 80%;
     margin-top: .25rem;
     margin-bottom: 0;
 }

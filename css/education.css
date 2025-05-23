@@ -34,6 +34,7 @@
 .bachelors-card, .masters-card {
     display: flex;
     flex-direction: column;
+    position: relative;
     justify-content: flex-start;
     align-items: center;
     margin: 0.5rem;
@@ -41,21 +42,27 @@
     overflow-y: auto;
     border-radius: 10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: solid 3px rgba(134, 134, 134, 0.534);
     min-width: 90%;
     height: 90%;
 }
 
+.bachelors-card h2, .masters-card h2 {
+    color: black;
+    text-align: center;
+    margin-top: .25rem;
+    max-width: 80%;
+    margin-bottom: 0;
+}
+
 .bachelors-card p, .masters-card p {
-    font-size: clamp(8px, 1rem, 24px);
-    margin: .5rem;
-    padding: 0.5rem;
-    line-height: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 3px rgba(134, 134, 134, 0.534);
+    padding: .75rem;
     text-align: start;
-    word-wrap: break-word;
     overflow-y: auto;
-    white-space: normal;
+    border-radius: 10px;
+    height: 90%;
+    width: 90%;
 }
 
 .education h2 {
@@ -114,13 +121,11 @@
 .masters button,
 .bachelors  button {
     position: absolute;
+    background-color: transparent;
     top: 0;
     right: 0;
-    background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     font-size: 1.5rem;
-    padding: 1rem;
-    margin-right: 3rem;
     cursor: pointer;
 }

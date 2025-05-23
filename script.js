@@ -70,26 +70,26 @@ const hideMasters = (event) => {
 
 const growBook = (book) => {
   const bookDiv = document.querySelector(`.${book}-explanation`);
-  const gridDivs = document.querySelectorAll('.books');
+  const gridDiv = document.querySelector('.book-grid');
   if (bookDiv) {
     bookDiv.classList.add('visible');
-    gridDivs.forEach(div => {
-      div.style.filter = 'blur(5px)';
-      div.style.pointerEvents = 'none';
-    });
+    if (gridDiv) {
+      gridDiv.style.filter = 'blur(5px)';
+      gridDiv.style.pointerEvents = 'none';
+    }
   }
 }
 
 const hideBook = (book) => {
   const bookDiv = document.querySelector(`.${book}-explanation`);
-  const gridDivs = document.querySelectorAll('.books');
+  const gridDiv = document.querySelector('.book-grid');
 
   if (bookDiv) {
     bookDiv.classList.remove('visible');
-    gridDivs.forEach(div => {
-      div.style.filter = 'none';
-      div.style.pointerEvents = 'all';
-    });
+    if (gridDiv) {
+      gridDiv.style.filter = 'none';
+      gridDiv.style.pointerEvents = 'all';
+    }
   }
 }
 

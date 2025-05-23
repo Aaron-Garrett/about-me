@@ -33,10 +33,23 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Add semi-transparent background */
+    border-left: 3px solid;
+    border-image: linear-gradient(to bottom, teal 0%, blue 100%) 1;
+    animation: slideLeftBorder 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    /* Text color */
+}
+
+@keyframes slideLeftBorder {
+    from {
+        border-image: linear-gradient(to bottom, teal 0%, blue 5%) 1;
+    }
+    50% {
+        border-image: linear-gradient(to bottom, teal 0%, blue 50%) 1;
+    }
+    to {
+        border-image: linear-gradient(to bottom, teal 0%, blue 100%) 1;
+    }
 }
 
 .top-left img {
@@ -65,10 +78,23 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Add semi-transparent background */
+    border-left: 3px solid;
+    border-image: linear-gradient(to bottom, purple 50%, lightgray 100%) 1;
+    animation: slideRightBorder 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    /* Text color */
+}
+
+@keyframes slideRightBorder {
+    from {
+        border-image: linear-gradient(to bottom, purple 50%, lightgray 5%) 1;
+    }
+    50% {
+        border-image: linear-gradient(to bottom, purple 50%, lightgray 50%) 1;
+    }
+    to {
+        border-image: linear-gradient(to bottom, purple 50%, lightgray 100%) 1;
+    }
 }
 
 .bottom-right {
@@ -101,10 +127,23 @@
     left: 0%;
     width: 100%;
     height: 100%;
+    border-left: 3px solid;
+    border-image: linear-gradient(to bottom, orange 0%, red 100%) 1;
+    animation: slideBorder 0.3s ease-in-out;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Add semi-transparent background */
     color: white;
-    /* Text color */
+}
+
+@keyframes slideBorder {
+    from {
+        border-image: linear-gradient(to bottom, orange 0%, red 5%) 1;
+    }
+    50% {
+        border-image: linear-gradient(to bottom, orange 0%, red 50%) 1;
+    }
+    to {
+        border-image: linear-gradient(to bottom, orange 0%, red 100%) 1;
+    }
 }
 
 .diagonal img {
@@ -137,6 +176,9 @@
 .goals h2 {
     color: black;
     text-align: center;
+    max-width: 80%;
+    margin-top: .25rem;
+    margin-bottom: 0;
 }
 
 .where-from p,
@@ -144,25 +186,24 @@
 .goals p {
     background-color: rgba(0, 0, 0, 0.8);
     border: solid 3px rgba(134, 134, 134, 0.534);
-    padding: 3rem;
+    padding: .75rem;
     text-align: start;
     overflow-y: auto;
     border-radius: 10px;
-    height: 75%;
-    width: 75%;
+    height: 90%;
+    width: 90%;
 }
 
 .where-from button,
 .passions button,
 .goals button {
     position: absolute;
-    top: 3rem;
     background-color: transparent;
+    top: 0;
+    right: 0;
     border: none;
-    color: white;
+    color: black;
     font-size: 1.5rem;
-    padding: 1rem;
-    margin-left: calc(100% - 9rem);
     cursor: pointer;
 }
 
