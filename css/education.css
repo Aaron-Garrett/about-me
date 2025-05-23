@@ -51,7 +51,9 @@
     line-height: 2rem;
     text-align: start;
     word-wrap: break-word;
+    overflow-y: auto;
     white-space: normal;
+    -webkit-overflow-scrolling: touch;
 }
 
 .education-list {

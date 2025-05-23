@@ -113,6 +113,8 @@
 .growth-explanation p,
 .wrong-explanation p,
 .lotr-explanation p {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background-color: rgba(0, 0, 0, 0.8);
     border: solid 3px rgba(134, 134, 134, 0.534);
     padding: 3rem;

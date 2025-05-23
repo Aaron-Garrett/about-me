@@ -132,6 +132,8 @@
     text-align: start;
     height: 75%;
     width: 75%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .hiking-explanation h2,
