@@ -1,12 +1,12 @@
-/* filepath: c:\Users\BatJew\OneDrive\Documents\GitHub\about-me\css\book-list.css */
 .book-img {
-    width: 100%;
-    height: 100%;
+    min-width: 200px;
+    height: 300px;
     position: relative;
     padding: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .book-img img {
@@ -150,4 +150,63 @@
     text-align: center;
     margin-top: .25rem;
     margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .book-list {
+        height: 96%;
+        display: block;
+        position: relative;
+    }
+    .book-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        align-items: center;
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+        height: 100%;
+    }
+
+    .book-img {
+        width: 85%;
+        height: 100%;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+
+    .book-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .book-img::before {
+        content: "Click to View Details";
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(7px, .5rem, 24px);
+        align-items: center;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .book-img:hover {
+        scale: 1;
+    }
+
 }
