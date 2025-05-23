@@ -74,7 +74,7 @@
 .top-nav {
     grid-row: 1;
     grid-column: 2;
-    margin-bottom: .5rem;
+    margin-bottom: -.5rem;
     justify-self: center;
     align-self: end;
 }
@@ -84,8 +84,7 @@
     grid-column: 1;
     align-self: center;
     justify-self: end;
-    padding-right: .5rem;
-    padding-left: 0rem;
+    margin-right: -.5rem;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     /* Already center, keeping for consistency */

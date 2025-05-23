@@ -130,6 +130,7 @@
     padding: 3rem;
     border-radius: 10px;
     text-align: start;
+    overflow-y: auto;
     height: 75%;
     width: 75%;
 }
