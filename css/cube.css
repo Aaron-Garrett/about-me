@@ -137,7 +137,7 @@ main {
 }
 
 .control i {
-    font-size: 20px;
+    font-size: clamp(8px, 1rem, 24px);
 }
 
 @media (max-width: 768px) {
@@ -194,13 +194,13 @@ main {
     }
 
     .control {
-        font-size: 14px;
+        font-size: clamp(8px, 1rem, 24px);
         padding: 8px;
         margin: 3px;
     }
 
     .control i {
-        font-size: 16px;
+        font-size: clamp(8px, 1rem, 24px);
     }
 
     /* Faces of the cube */
@@ -213,7 +213,7 @@ main {
         justify-content: center;
         align-items: center;
         color: #333;
-        font-size: 18px;
+        font-size: clamp(8px, 1rem, 24px);
         box-sizing: border-box;
         border: 2px solid #ccc;
         transform-origin: center;

@@ -39,7 +39,7 @@
     height: 100%;
     text-decoration: underline;
     color: white;
-    font-size: 2rem;
+    font-size: clamp(8px, 1rem, 24px);
 }
 
 .img-description a {
@@ -78,7 +78,7 @@
 .link {
     color: #FFFFFF;
     text-decoration: underline;
-    font-size: 1rem;
+    font-size: clamp(8px, 1rem, 24px);
     font-weight: bold;
     text-align: center;
 }
