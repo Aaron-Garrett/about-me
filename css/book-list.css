@@ -144,10 +144,14 @@
         height: 96%;
         display: block;
         position: relative;
-    }    .book-grid {
+        overflow-x: auto;
+    }
+
+    .book-grid {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+        white-space: nowrap;
         align-items: center;
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
@@ -157,6 +161,7 @@
         margin: 0;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior-x: contain;
+        min-width: 300%;
     }
 
     .book-img {
@@ -201,7 +206,9 @@
         border-radius: 0;
         object-fit: cover;
         position: relative;
-    }    .bible-explanation p,
+    }
+
+    .bible-explanation p,
     .ownership-explanation p,
     .habits-explanation p,
     .leadership-explanation p,
