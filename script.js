@@ -73,9 +73,20 @@ const growBook = (book) => {
   const gridDiv = document.querySelector('.book-grid');
   if (bookDiv) {
     bookDiv.classList.add('visible');
+    
+    // Enable scrolling on the book explanation content
+    const contentP = bookDiv.querySelector('p');
+    if (contentP) {
+      contentP.style.overflow = 'auto';
+      contentP.style.WebkitOverflowScrolling = 'touch';
+    }
+    
     if (gridDiv) {
       gridDiv.style.filter = 'blur(5px)';
-      gridDiv.style.pointerEvents = 'none';
+      // Don't completely disable pointer events on mobile
+      if (window.innerWidth > 768) {
+        gridDiv.style.pointerEvents = 'none';
+      }
     }
   }
 }
@@ -145,7 +156,7 @@ const hideHobby = (name) => {
   }
 }
 
-adjustPhotos() = () => {
+adjustPhotos = () => {
   const photos = document.querySelectorAll('.photo-gallery .photo');
   const positions = [
     { translateX: '-30%', rotate: '180deg' },
@@ -161,3 +172,29 @@ adjustPhotos() = () => {
     }
   });
 }
+
+// Initialize mobile touch handling when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Fix for mobile scroll issues
+  const setupMobileScrolling = () => {
+    // Add passive touch listeners to improve scroll performance
+    const explanations = document.querySelectorAll('.bible-explanation p, .ownership-explanation p, .habits-explanation p, .leadership-explanation p, .dare-explanation p, .growth-explanation p, .wrong-explanation p, .lotr-explanation p');
+    
+    explanations.forEach(explanation => {
+      // Prevent parent element scroll when scrolling inside the content
+      explanation.addEventListener('touchmove', (e) => {
+        e.stopPropagation();
+      }, { passive: true });
+    });
+    
+    // Enable horizontal scrolling for the book grid
+    const bookGrid = document.querySelector('.book-grid');
+    if (bookGrid) {
+      bookGrid.addEventListener('touchmove', (e) => {
+        e.stopPropagation();
+      }, { passive: true });
+    }
+  };
+  
+  setupMobileScrolling();
+});
