@@ -158,6 +158,7 @@
         display: block;
         position: relative;
     }
+
     .book-grid {
         display: flex;
         flex-wrap: nowrap;
@@ -166,6 +167,8 @@
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
         height: 100%;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
 
     .book-img {
@@ -207,6 +210,28 @@
 
     .book-img:hover {
         scale: 1;
+    }
+
+    .bible-explanation p,
+    .ownership-explanation p,
+    .habits-explanation p,
+    .leadership-explanation p,
+    .dare-explanation p,
+    .growth-explanation p,
+    .wrong-explanation p,
+    .lotr-explanation p {
+        font-size: clamp(7px, .5rem, 24px);
+    }
+
+    .bible-explanation h2,
+    .ownership-explanation h2,
+    .habits-explanation h2,
+    .leadership-explanation h2,
+    .dare-explanation h2,
+    .growth-explanation h2,
+    .wrong-explanation h2,
+    .lotr-explanation h2 {
+        font-size: clamp(9px, .75rem, 24px);
     }
 
 }

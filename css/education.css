@@ -150,7 +150,7 @@
     }
 
     .education h2 {
-        font-size: clamp(10px, 1rem, 30px);
+        font-size: clamp(9px, .75rem, 30px);
     }
 
     .education-list {
@@ -177,7 +177,7 @@
     .bachelors-card p,
     .masters-card p {
         width: 85%;
-        font-size: clamp(7px, .75rem, 24px);
+        font-size: clamp(7px, .5rem, 24px);
     }
 
 }
