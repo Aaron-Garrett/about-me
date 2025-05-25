@@ -221,6 +221,7 @@
     .wrong-explanation p,
     .lotr-explanation p {
         font-size: clamp(7px, .5rem, 24px);
+        overflow-y: auto;
     }
 
     .bible-explanation h2,

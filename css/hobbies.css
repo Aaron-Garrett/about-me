@@ -232,6 +232,7 @@
     .reading-explanation p,
     .scuba-explanation p {
         font-size: clamp(7px, .5rem, 24px);
+        overflow-y: auto;
     }
 
     .hiking-explanation h2,

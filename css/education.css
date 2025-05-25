@@ -172,12 +172,14 @@
     .masters-card {
         width: 80%;
         height: 80%;
+        overflow-x: auto;
     }
 
     .bachelors-card p,
     .masters-card p {
         width: 85%;
         font-size: clamp(7px, .5rem, 24px);
+        overflow-y: auto;
     }
 
 }

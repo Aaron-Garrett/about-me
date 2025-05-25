@@ -296,6 +296,9 @@
     .passions p,
     .goals p {
         font-size: clamp(7px, .5rem, 24px);
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
 }
