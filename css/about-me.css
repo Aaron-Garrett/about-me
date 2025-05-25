@@ -299,6 +299,12 @@
         -webkit-overflow-scrolling: touch;
         overflow-y: auto;
         overscroll-behavior: contain;
+        height: max-content;
+    }
+
+    .about-me-topics {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
 }
