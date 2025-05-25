@@ -144,9 +144,7 @@
         height: 96%;
         display: block;
         position: relative;
-    }
-
-    .book-grid {
+    }    .book-grid {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -157,6 +155,8 @@
         overflow-y: hidden;
         padding: 0;
         margin: 0;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
     }
 
     .book-img {
@@ -201,9 +201,7 @@
         border-radius: 0;
         object-fit: cover;
         position: relative;
-    }
-
-    .bible-explanation p,
+    }    .bible-explanation p,
     .ownership-explanation p,
     .habits-explanation p,
     .leadership-explanation p,
@@ -213,6 +211,8 @@
     .lotr-explanation p {
         font-size: clamp(7px, .5rem, 24px);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
     }
 
     .bible-explanation h2,
@@ -225,6 +225,5 @@
     .lotr-explanation h2 {
         font-size: clamp(9px, .75rem, 24px);
     }
-
 
 }
