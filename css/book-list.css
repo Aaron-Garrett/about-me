@@ -85,8 +85,6 @@
     pointer-events: all;
     opacity: 0;
     transition: opacity .3s ease-in-out, transform .3s ease-in-out;
-    overscroll-behavior: contain; /* Prevents scroll chaining */
-    touch-action: pan-y pinch-zoom; /* Enables touch scrolling */
 }
 
 .bible-explanation.visible,
@@ -100,23 +98,6 @@
     opacity: 1;
     z-index: 13;
     transform: translate(-50%, -50%) scale(1);
-}
-
-@media (max-width: 768px) {
-    .bible-explanation.visible,
-    .ownership-explanation.visible,
-    .habits-explanation.visible,
-    .leadership-explanation.visible,
-    .dare-explanation.visible,
-    .growth-explanation.visible,
-    .wrong-explanation.visible,
-    .lotr-explanation.visible {
-        overflow-y: auto; /* Enable vertical scrolling on the container */
-        display: flex;
-        flex-direction: column;
-        height: 100vh; /* Use viewport height */
-        max-height: -webkit-fill-available; /* Better height on iOS */
-    }
 }
 
 .bible-explanation button,
@@ -135,24 +116,6 @@
     color: black;
     font-size: 1.5rem;
     cursor: pointer;
-    padding: 15px; /* Larger touch target for mobile */
-    z-index: 20; /* Ensure button is above content */
-}
-
-@media (max-width: 768px) {
-    .bible-explanation button,
-    .ownership-explanation button,
-    .habits-explanation button,
-    .leadership-explanation button,
-    .dare-explanation button,
-    .growth-explanation button,
-    .wrong-explanation button,
-    .lotr-explanation button {
-        padding: 20px; /* Even larger touch target on mobile */
-        font-size: 2rem; /* Larger button on mobile */
-        background-color: rgba(255, 255, 255, 0.2); /* Subtle background to make the button more visible */
-        border-radius: 50%; /* Circular button */
-    }
 }
 
 .bible-explanation p,
@@ -168,7 +131,6 @@
     padding: .75rem;
     text-align: start;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
     border-radius: 10px;
     height: 90%;
     width: 90%;
@@ -194,7 +156,6 @@
         height: 96%;
         display: block;
         position: relative;
-        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
     }
 
     .book-grid {
@@ -208,8 +169,6 @@
         overflow-y: hidden;
         padding: 0;
         margin: 0;
-        touch-action: pan-x; /* Enables horizontal touch scrolling */
-        overscroll-behavior-x: contain; /* Prevents horizontal scroll chaining */
     }
 
     .book-img {
@@ -251,7 +210,9 @@
 
     .book-img:hover {
         scale: 1;
-    }    .bible-explanation p,
+    }
+
+    .bible-explanation p,
     .ownership-explanation p,
     .habits-explanation p,
     .leadership-explanation p,
@@ -261,9 +222,6 @@
     .lotr-explanation p {
         font-size: clamp(7px, .5rem, 24px);
         overflow-y: auto;
-        max-height: 70vh; /* Limit height to ensure scrollability */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        touch-action: pan-y; /* Enable vertical touch scrolling */
     }
 
     .bible-explanation h2,
