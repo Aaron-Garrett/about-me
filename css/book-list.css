@@ -149,7 +149,7 @@
     .book-grid {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x: scroll;
         align-items: center;
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
@@ -212,7 +212,7 @@
     .wrong-explanation p,
     .lotr-explanation p {
         font-size: clamp(7px, .5rem, 24px);
-        overflow-y: auto;
+        overflow-y: scroll;
     }
 
     .bible-explanation h2,
