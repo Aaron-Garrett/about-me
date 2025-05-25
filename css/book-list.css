@@ -144,14 +144,12 @@
         height: 96%;
         display: block;
         position: relative;
-        overflow-x: auto;
     }
 
     .book-grid {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        white-space: nowrap;
         align-items: center;
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
@@ -159,9 +157,6 @@
         overflow-y: hidden;
         padding: 0;
         margin: 0;
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior-x: contain;
-        min-width: 300%;
     }
 
     .book-img {
@@ -218,8 +213,6 @@
     .lotr-explanation p {
         font-size: clamp(7px, .5rem, 24px);
         overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior: contain;
     }
 
     .bible-explanation h2,
