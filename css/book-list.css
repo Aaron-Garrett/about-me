@@ -156,6 +156,7 @@
         height: 96%;
         display: block;
         position: relative;
+        overflow-x: auto;
     }
 
     .book-grid {
@@ -166,7 +167,6 @@
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
         height: 100%;
-        overflow-y: hidden;
         padding: 0;
         margin: 0;
     }
