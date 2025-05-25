@@ -384,4 +384,12 @@ html, body {
     transition: opacity 0.3s ease-in-out;
   }
 
+#about-me::before,
+#portfolio::before,
+#education::before,
+#book-list::before {
+  font-size: clamp(7px, .75rem, 24px);
+}
+
+
 }
