@@ -156,12 +156,19 @@
         height: 96%;
         display: block;
         position: relative;
+        flex-wrap: nowrap;
+        white-space: nowrap;
         overflow-x: auto;
+        overflow-y: hidden;
+        /* Optional, just for cleanliness */
+        -webkit-overflow-scrolling: touch;
+        /* Enables momentum scrolling on iOS */
     }
 
     .book-grid {
         display: flex;
         flex-wrap: nowrap;
+        white-space: nowrap;
         overflow-x: auto;
         align-items: center;
         justify-content: flex-start;
@@ -169,6 +176,7 @@
         height: 100%;
         padding: 0;
         margin: 0;
+        min-width: max-content;
     }
 
     .book-img {
