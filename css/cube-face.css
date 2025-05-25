@@ -38,6 +38,7 @@
     align-self: center;
     text-align: left;
     margin: .5rem;
+    overflow-x: auto;
 }
 
 .left-cube .about-me p,
@@ -46,6 +47,7 @@
 .top .portfolio p,
 .bottom .education p {
     overflow-y: auto;
+    overflow-x: auto;
 }
 
 .home-nav {
@@ -107,5 +109,6 @@
         width: 100%;
         height: 100%;
         color: white;
+        overflow: auto;
     }
 }
