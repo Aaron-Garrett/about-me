@@ -223,6 +223,10 @@
 
 @media (max-width: 768px) {
 
+    .corner, .diagnonal {
+        cursor: pointer;
+    }
+
     .diagonal::before {
         content: 'My Passions';
         position: absolute;
