@@ -145,11 +145,6 @@ main {
         width: 72vw;
         height: 72vw;
         perspective: 800px;
-        overflow: auto;
-    }
-
-    .face {
-        overflow: auto;
     }
 
     /* Update cube size for mobile */
