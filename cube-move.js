@@ -168,6 +168,27 @@ function resetCube() {
 function updateCubeRotation() {
     const cube = document.getElementById('cube');
     cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+    // Disable pointer-events for all faces
+    const faces = document.querySelectorAll('.cube .face');
+    faces.forEach(face => face.style.pointerEvents = 'none');
+
+    // Determine which face is in front based on rotation
+    const normalizedX = ((rotationX % 360) + 360) % 360;
+    const normalizedY = ((rotationY % 360) + 360) % 360;
+
+    let visibleFace;
+    if (normalizedX === 0 && normalizedY === 0) visibleFace = 'front';
+    else if (normalizedX === 0 && normalizedY === 90) visibleFace = 'left-cube';
+    else if (normalizedX === 0 && normalizedY === 270) visibleFace = 'right-cube';
+    else if (normalizedX === 0 && normalizedY === 180) visibleFace = 'back-cube';
+    else if (normalizedX === 90) visibleFace = 'bottom';
+    else if (normalizedX === 270) visibleFace = 'top';
+
+    if (visibleFace) {
+        const faceEl = document.querySelector(`.${visibleFace}`);
+        if (faceEl) faceEl.style.pointerEvents = 'auto';
+    }
 }
 
 // Optional: Initialize the cube with a default rotation when the page loads
