@@ -1,3 +1,15 @@
+const element = document.getElementById('where-from-btn');
+
+// Handle both touch and click
+element.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    showAboutMe('where-from');
+});
+
+element.addEventListener('click', function() {
+    showAboutMe('where-from');
+});
+
 const toggleNav = () => {
   setTimeout(() => {
     document.body.classList.add('open');
