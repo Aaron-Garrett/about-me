@@ -145,7 +145,7 @@ const hideHobby = (name) => {
   }
 }
 
-adjustPhotos() = () => {
+adjustPhotos = () => {
   const photos = document.querySelectorAll('.photo-gallery .photo');
   const positions = [
     { translateX: '-30%', rotate: '180deg' },
