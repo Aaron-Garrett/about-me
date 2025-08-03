@@ -162,6 +162,16 @@
     border-radius: 8px;
 }
 
+.video,
+video {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
 
     .photos h2,
@@ -171,6 +181,12 @@
         font-size: clamp(8px, 1rem, 24px);
         margin: 0;
         padding: 0;
+    }
+
+    .video,
+    video {
+        max-width: 300px;
+        max-height: 150px;
     }
 
     .photo {
