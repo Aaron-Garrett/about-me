@@ -1,0 +1,165 @@
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f9f9f9;
+        color: #222;
+    }
+
+    header {
+        background: #0d1b2a;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #102542;
+    }
+
+    .hero {
+        background: #e0e6ed;
+        text-align: center;
+        padding: 6rem 2rem 4rem;
+    }
+
+    .hero img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 1rem;
+    }
+
+    .grid {
+        display: grid;
+        height: 75vh;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .card,
+    .portfolio-item,
+    .book-card,
+    .edu-card,
+    .hobby-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .card img,
+    .portfolio-item img,
+    .book-card img,
+    .hobby-card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .portfolio-item a {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #0077cc;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .portfolio-item a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: #0d1b2a;
+        color: white;
+        margin-top: 4rem;
+    }
+
+    #small-where-from,
+    #small-goals,
+    #small-passions {
+        display: none;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        height: 22vh;
+        width: 75vw;
+        transition: height 0.3s ease;
+        align-self: center;
+        justify-self: start;
+    }
+
+    @keyframes heightChange {
+        from {
+            height: 22vh;
+        }
+        to {
+            height: 72vh;
+        }
+    }
+
+    #small-where-from.visible,
+    #small-goals.visible,
+    #small-passions.visible {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 72vh;
+        animation: heightChange 0.5s ease;
+    }
+
+    /* #small-where-from p,
+    #small-goals p,
+    #small-passions p {
+        margin-top: -2rem;
+        line-height: 1.25rem;
+    } */
+
+    .card-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+}

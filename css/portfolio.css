@@ -174,33 +174,6 @@ video {
 
 @media (max-width: 768px) {
 
-    .photos h2,
-    .website h2 {
-        color: black;
-        text-align: start;
-        font-size: clamp(8px, 1rem, 24px);
-        margin: 0;
-        padding: 0;
-    }
-
-    .video,
-    video {
-        max-width: 300px;
-        max-height: 150px;
-    }
-
-    .photo {
-        position: absolute;
-        width: 125px;
-        height: 75px;
-        top: calc(50% - 30px);
-        left: 50%;
-        transform-origin: center center;
-        transition: all 0.5s ease-out;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
+    
 
 }

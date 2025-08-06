@@ -4,20 +4,21 @@
     <title>My Web Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/cube.css">
-    <link rel="stylesheet" type="text/css" href="css/cube-face.css">
+    <link rel="stylesheet" type="text/css" href="css/cube.css" media="(min-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="css/cube-face.css" media="(min-width: 768px)">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/education.css">
-    <link rel="stylesheet" type="text/css" href="css/book-list.css">
-    <link rel="stylesheet" type="text/css" href="css/about-me.css">
-    <link rel="stylesheet" type="text/css" href="css/hobbies.css">
-    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="css/education.css" media="(min-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="css/book-list.css" media="(min-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="css/about-me.css" media="(min-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="css/hobbies.css" media="(min-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css" media="(min-width: 768px)">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width: 768px)">
     <script src="script.js"></script>
     <script src="cube-move.js"></script>
 </head>
 
 <body>
-    <main>
+    <main id="large-screen">
         <div class="container">
             <div class="welcome">
                 <div class="flag-string">
@@ -90,7 +91,7 @@
                                     of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions
                                     Architect.
                                     While having spent my life in Indiana, I have traveled to many places, including
-                                    many other states, Israel, and doing an internship in Australia for a summer.
+                                    other countries such as Israel and Australia.
                                 </p>
                             </div>
                             <div class="passions">
@@ -658,6 +659,177 @@
                 <button class="control" id="reset-button" onclick="resetCube()"><i
                         class="fa-solid fa-house"></i></button>
             </div> -->
+    </main>
+    <main id="small-screen">
+        <header>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+            </ul>
+        </header>
+
+        <section class="hero">
+            <h1>About Me: Aaron Garrett</h1>
+            <p style="margin: 0.5rem 0 2rem;">Faith | People | Nature | Learning</p>
+            <img src="img/headshot.jpg" alt="Aaron Garrett headshot">
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="grid">
+                <div class="card" onclick="showAboutMeSmall('small-where-from')">
+                    <h3>Where I'm From</h3>
+                    <p>Plainfield, IN.<br><br>
+                        Please click to see more.</p>
+                </div>
+                <div class="card" onclick="showAboutMeSmall('small-passions')">
+                    <h3>Passions</h3>
+                    <p>Faith, people, nature, learning, and family drive everything I do.</p>
+                </div>
+                <div class="card" onclick="showAboutMeSmall('small-goals')">
+                    <h3>Goals</h3>
+                    <p>Honor G-d, lead with integrity, be a devoted husband and father, and help others grow.</p>
+                </div>
+                <div id="small-where-from">
+                    <div class="card-top">
+                        <button onclick="hideAboutMeSmall('small-where-from')"><i
+                                class="fa-solid fa-close"></i></button>
+                        <h2>Where I'm From</h2>
+                    </div>
+                    <p>
+                        I grew up in Plainfield, Indiana, having gone to Avon High School. I then went to
+                        Indiana University, where I got my Bachelor's and Master's degrees. I now live in a
+                        suburb
+                        of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions
+                        Architect.
+                        While having spent my life in Indiana, I have traveled to many places, including
+                        other countries such as Israel and Australia.
+                    </p>
+                </div>
+                <div id="small-passions">
+                    <div class="card-top">
+                        <button onclick="hideAboutMeSmall('small-passions')"><i class="fa-solid fa-close"></i></button>
+                        <h2>What are my passions?</h2>
+                    </div>
+                    <p>
+                        1. Faith. My faith is the most important thing in my life. I strive to live my life
+                        in a way that lives out my faith and its foundational principles.<br>
+                        2. People. This is number one because my greatest passion is to pour into people and
+                        help them become the best version of themselves.<br>
+                        3. Nature. I love being outside. The beauty of nature is second to none and feeling
+                        the breeze as I walk through the wonder of nature gives me more life than anything
+                        else.<br>
+                        4. Learning. I love learning new things. I love to build as I often see the results
+                        of what I am learning in a very tangible way. This can be building websites,
+                        woodworking, or even just
+                        some yard work.<br>
+                        5. Family. Family is what gets me out of bed in the morning. I wake up
+                        every day to my favorite people.
+                    </p>
+                </div>
+                <div id="small-goals">
+                    <div class="card-top">
+                        <button onclick="hideAboutMeSmall('small-goals')"><i class="fa-solid fa-close"></i></button>
+                        <h2>What are my goals?</h2>
+                    </div>
+                    <p>
+                        1. I strive to honor G-d with my life.<br>
+                        2. I strive to live out my family's guiding principals.<br>
+                        3. I strive to be the best husband and father I can be.<br>
+                        4. I strive to be a leader who pours into others and helps them grow.<br>
+                        5. I strive to be a person who is known for their integrity and honesty.<br>
+                        6. I strive to be patient and kind, quick to listen, and empathetic.<br>
+                        7. I strive to use my life to truly help as many people as I can.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="grid">
+                <div class="portfolio-item">
+                    <img src="img/website.png" alt="Website Demo">
+                    <h3>Apologetics Website</h3>
+                    <a href="https://aaron-garrett.github.io/batjew_apologetics" target="_blank">Visit Site</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="books">
+            <h2>Books That Inspire</h2>
+            <div class="grid">
+                <div class="book-card"><img src="img/bible.jpg" alt="Bible">
+                    <h3>The Bible</h3>
+                </div>
+                <div class="book-card"><img src="img/extreme-ownership.jpg" alt="Extreme Ownership">
+                    <h3>Extreme Ownership</h3>
+                </div>
+                <div class="book-card"><img src="img/atomic-habits.jpg" alt="Atomic Habits">
+                    <h3>Atomic Habits</h3>
+                </div>
+                <div class="book-card"><img src="img/being-wrong.jpg" alt="Being Wrong">
+                    <h3>Being Wrong</h3>
+                </div>
+                <div class="book-card"><img src="img/15-invaluable-laws.jpg" alt="15 Invaluable Laws">
+                    <h3>15 Laws of Growth</h3>
+                </div>
+                <div class="book-card"><img src="img/dare-to-lead.jpg" alt="Dare to Lead">
+                    <h3>Dare to Lead</h3>
+                </div>
+                <div class="book-card"><img src="img/21-irrefutable-laws.jpg" alt="21 Laws">
+                    <h3>21 Laws of Leadership</h3>
+                </div>
+                <div class="book-card"><img src="img/lord-of-the-rings.jpg" alt="LOTR">
+                    <h3>The Lord of the Rings</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="grid">
+                <div class="edu-card">
+                    <h3>Bachelor's Degree</h3>
+                    <p>Information Systems, Management, and Business Law from IU Kelley School of Business.</p>
+                </div>
+                <div class="edu-card">
+                    <h3>Master's Degree</h3>
+                    <p>Cybersecurity, Analytics, and ERP systems from IU Kelley School of Business.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2>My Hobbies</h2>
+            <div class="grid">
+                <div class="hobby-card"><img src="img/hiking.jpg" alt="Hiking">
+                    <h3>Hiking</h3>
+                </div>
+                <div class="hobby-card"><img src="img/fishing.jpg" alt="Fishing">
+                    <h3>Fishing</h3>
+                </div>
+                <div class="hobby-card"><img src="img/photography.jpg" alt="Photography">
+                    <h3>Photography</h3>
+                </div>
+                <div class="hobby-card"><img src="img/writing.jpg" alt="Writing">
+                    <h3>Writing</h3>
+                </div>
+                <div class="hobby-card"><img src="img/reading.jpg" alt="Reading">
+                    <h3>Reading</h3>
+                </div>
+                <div class="hobby-card"><img src="img/scuba.jpg" alt="SCUBA">
+                    <h3>SCUBA Diving</h3>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; About Me | Built by Aaron Garrett</p>
+        </footer>
     </main>
 </body>
 

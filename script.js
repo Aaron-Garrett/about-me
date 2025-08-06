@@ -145,6 +145,22 @@ const hideHobby = (name) => {
   }
 }
 
+const showAboutMeSmall = (name) => {
+  console.log("Calling showAboutMeSmall with name:", name); // Debugging line
+  const aboutMeDiv = document.querySelector(`#${name}`);
+  if (aboutMeDiv) {
+    aboutMeDiv.classList.add('visible');
+  }
+}
+  
+const hideAboutMeSmall = (name) => {
+  console.log("Calling hideAboutMeSmall with name:", name); // Debugging line
+  const aboutMeDiv = document.querySelector(`#${name}`);
+  if (aboutMeDiv) {
+    aboutMeDiv.classList.remove('visible');
+  }
+}
+
 adjustPhotos() = () => {
   const photos = document.querySelectorAll('.photo-gallery .photo');
   const positions = [
