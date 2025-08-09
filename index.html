@@ -752,77 +752,356 @@
             <h2>Portfolio</h2>
             <div class="grid">
                 <div class="portfolio-item">
-                    <img src="img/website.png" alt="Website Demo">
                     <h3>Apologetics Website</h3>
+                    <img src="img/website.png" alt="Website Demo">
                     <a href="https://aaron-garrett.github.io/batjew_apologetics" target="_blank">Visit Site</a>
+                    <h3>My Photography</h>
+                        <a href="gallery_placeholder" target="_blank">
+                            <div class="photo-gallery" onmouseover="adjustPhotos()">
+                                <div class="photo">
+                                    <img src="./img/Cardinal.jpg" alt="Cardinal">
+                                </div>
+                                <div class="photo">
+                                    <img src="./img/Eagle_Carrying_Fish_Cropped.jpg" alt="Eagle Carrying a Fish">
+                                </div>
+                            </div>
+                        </a>
                 </div>
             </div>
         </section>
 
         <section id="books">
             <h2>Books That Inspire</h2>
-            <div class="grid">
-                <div class="book-card"><img src="img/bible.jpg" alt="Bible">
-                    <h3>The Bible</h3>
+            <div class="books">
+                <div class="book-card" onclick="showBookSmall('bible')"><img src="img/bible.jpg" alt="Bible">
                 </div>
-                <div class="book-card"><img src="img/extreme-ownership.jpg" alt="Extreme Ownership">
-                    <h3>Extreme Ownership</h3>
+                <div class="book-card" onclick="showBookSmall('ownership')"><img src="img/extreme-ownership.jpg"
+                        alt="Extreme Ownership">
                 </div>
-                <div class="book-card"><img src="img/atomic-habits.jpg" alt="Atomic Habits">
-                    <h3>Atomic Habits</h3>
+                <div class="book-card" onclick="showBookSmall('habits')"><img src="img/atomic-habits.jpg"
+                        alt="Atomic Habits">
                 </div>
-                <div class="book-card"><img src="img/being-wrong.jpg" alt="Being Wrong">
-                    <h3>Being Wrong</h3>
+                <div class="book-card" onclick="showBookSmall('wrong')"><img src="img/being-wrong.jpg"
+                        alt="Being Wrong">
                 </div>
-                <div class="book-card"><img src="img/15-invaluable-laws.jpg" alt="15 Invaluable Laws">
-                    <h3>15 Laws of Growth</h3>
+                <div class="book-card" onclick="showBookSmall('growth')"><img src="img/15-invaluable-laws.jpg"
+                        alt="15 Invaluable Laws">
                 </div>
-                <div class="book-card"><img src="img/dare-to-lead.jpg" alt="Dare to Lead">
-                    <h3>Dare to Lead</h3>
+                <div class="book-card" onclick="showBookSmall('dare')"><img src="img/dare-to-lead.jpg"
+                        alt="Dare to Lead">
                 </div>
-                <div class="book-card"><img src="img/21-irrefutable-laws.jpg" alt="21 Laws">
-                    <h3>21 Laws of Leadership</h3>
+                <div class="book-card" onclick="showBookSmall('leadership')"><img src="img/21-irrefutable-laws.jpg"
+                        alt="21 Laws">
                 </div>
-                <div class="book-card"><img src="img/lord-of-the-rings.jpg" alt="LOTR">
-                    <h3>The Lord of the Rings</h3>
+                <div class="book-card" onclick="showBookSmall('lotr')"><img src="img/lord-of-the-rings.jpg" alt="LOTR">
+                </div>
+                <div class="bible-explanation-small">
+                    <button onclick="hideBookSmall('bible')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. G-d loves us enough to die for us, and we are to love each other in the same
+                        way<br>
+                        2. We are all "very good," but have the capacity for evil<br>
+                        3. It is okay to feel difficult emotions<br>
+                        4. Questions are pathways to deeper exploration and understanding<br>
+                        5. We are to be the best stewards of the world around us as we are able<br>
+                    </p>
+                </div>
+                <div class="ownership-explanation-small">
+                    <button onclick="hideBookSmall('ownership')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Own everything you can as it enables you to control what you can<br>
+                        2. You need to lead up the chain of command as well<br>
+                        3. There are no bad teams, only bad leaders<br>
+                        4. Empower those around you, enable decentralized command<br>
+                        5. Discipline = Freedom<br>
+                    </p>
+                </div>
+
+                <div class="habits-explanation-small">
+                    <button onclick="hideBookSmall('habits')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Make it obvious, attractive, easy, and satisfying<br>
+                        2. Reverse #1 to break bad habits<br>
+                        3. Habits only need two minutes to start being built<br>
+                        4. Progress starts slow, but takes off the longer you do it<br>
+                        5. The environment is important to building habits<br>
+                    </p>
+                </div>
+
+                <div class="wrong-explanation-small">
+                    <button onclick="hideBookSmall('wrong')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Being wrong often leads to new discoveries<br>
+                        2. People often are scared of being wrong, which is elevated in groups </br>
+                        3. Being wrong is a strength if you use it to learn new things and connect
+                        authentically<br>
+                        4. Being able to admit being wrong can lead to relief and even joy<br>
+                        5. We need to build a culture where being wrong is acceptable and touted as
+                        a positive force<br>
+                    </p>
+                </div>
+
+                <div class="growth-explanation-small">
+                    <button onclick="hideBookSmall('growth')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Growth requires intentionality<br>
+                        2. Growth requires personal reflection<br>
+                        3. Growth requires stretching beyond your comfort zone<br>
+                        4. Pain and hardship, if harnessed, can lead to growth<br>
+                        5. Asking questions is essential to growth<br>
+                    </p>
+                </div>
+
+                <div class="dare-explanation-small">
+                    <button onclick="hideBookSmall('dare')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Vulnerability is not weakness<br>
+                        2. Courage is not the absence of fear<br>
+                        3. A good leader is willing to rumble<br>
+                        4. Safe workspaces are not created by hiding from conflict<br>
+                        5. Trust is built in small moments<br>
+                    </p>
+                </div>
+
+                <div class="leadership-explanation-small">
+                    <button onclick="hideBookSmall('leadership')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Leadership requires growing relationships and building relationship
+                        capital<br>
+                        2. Success is limited by a leader's abilities, and those are grown with
+                        daily processes<br>
+                        3. Leaders capitalize on momentum<br>
+                        4. Leaders build other leaders<br>
+                        5. Leadership requires getting people to buy in<br>
+                    </p>
+                </div>
+
+                <div class="lotr-explanation-small">
+                    <button onclick="hideBookSmall('lotr')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Key Takeaways:</h2>
+                    <p>
+                        1. Even the things seen as insignificant have immense power<br>
+                        2. The desire for good, if untamed, can lead to bad outcomes<br>
+                        3. A leader is humble, but not self-effacing with serving others<br>
+                        4. "All we have to do is decide what to do with the time that is given to
+                        us."<br>
+                        5. Having an open mind can open you to incredible new experiences<br>
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <div class="grid">
-                <div class="edu-card">
+            <div class="education">
+                <div class="edu-card" onclick="showBachelorsSmall(event)">
                     <h3>Bachelor's Degree</h3>
-                    <p>Information Systems, Management, and Business Law from IU Kelley School of Business.</p>
+                    <ul>
+                        <li>Information Systems</li>
+                        <li>Management</li>
+                        <li>Business Law</li>
+                    </ul>
                 </div>
-                <div class="edu-card">
+                <div class="edu-card" onclick="showMastersSmall(event)">
                     <h3>Master's Degree</h3>
-                    <p>Cybersecurity, Analytics, and ERP systems from IU Kelley School of Business.</p>
+                    <ul>
+                        <li>Cybersecurity</li>
+                        <li>Analytics</li>
+                        <li>ERP systems</li>
+                    </ul>
+                </div>
+                <div class="bachelors-small">
+                    <div class="bachelors-small-card">
+                        <button onclick="hideBachelorsSmall(event)"><i class="fa-solid fa-close"></i></button>
+                        <h2>Information Systems</h2>
+                        <p>
+                            This degree focused mostly on technological foundations. This includes
+                            things such as getting intimately familiar with Excel, understanding
+                            databases
+                            and SQL, learning some fundamental programming, how to tranlsate business
+                            needs
+                            into user stories and technical requirements, and how internet and
+                            infrastructure works.
+                        </p>
+                    </div>
+                    <div class="bachelors-small-card">
+                        <button onclick="hideBachelorsSmall(event)"><i class="fa-solid fa-close"></i></button>
+                        <h2>Management</h2>
+                        <p>
+                            This degree focused on people. This ranged from the nuiances of
+                            international
+                            business, to a thorough understanding of HR and its functions, and included
+                            things such as change management and organizational structures.
+                        </p>
+                    </div>
+                    <div class="bachelors-small-card">
+                        <button onclick="hideBachelorsSmall(event)"><i class="fa-solid fa-close"></i></button>
+                        <h2>Business Law, Ethics, and Decision Making</h2>
+                        <p>
+                            This degree focused on understanding the legal and ethical implications of
+                            business decisions. This includes things such as contract law, tort law, and
+                            the different ethical frameworks that can be used to make decisions.
+                        </p>
+                    </div>
+                </div>
+                <div class="masters-small">
+                    <div class="masters-small-card">
+                        <button onclick="hideMastersSmall(event)"><i class="fa-solid fa-close"></i></button>
+                        <h2>Cybersecurity</h2>
+                        <p>
+                            This concentration was dedicated to preparing
+                            students to pass the CISSP exam, excluding vocabulary. It was all about
+                            concepts: the fundamentals of
+                            cybersecurity, how hackers work, understanding encryption, and the legality
+                            around cybersecurity.
+                        </p>
+                    </div>
+                    <div class="masters-small-card">
+                        <button onclick="hideMastersSmall(event)"><i class="fa-solid fa-close"></i></button>
+                        <h2>Business Intelligence and Analytics</h2>
+                        <p>
+                            This
+                            concentration was dedicated to
+                            understanding and building supervised learning models and how to make
+                            decisions
+                            based on the results of those models.
+                            It also dug into unsupervised learning models, providing a foundation and
+                            understanding to move into the AI world.
+                        </p>
+                    </div>
+                    <div class="masters-small-card">
+                        <button onclick="hideMastersSmall(event)"><i class="fa-solid fa-close"></i></button>
+                        <h2>Enterprise Resource Planning</h2>
+                        <p>
+                            This
+                            concentration was dedicated to understanding how
+                            ERP systems work. It specialized in understanding how SAP works and
+                            demonstrating
+                            our knowledge by building a system from
+                            Company Code up. Twice.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="hobbies">
             <h2>My Hobbies</h2>
-            <div class="grid">
-                <div class="hobby-card"><img src="img/hiking.jpg" alt="Hiking">
+            <div class="hobbies">
+                <div class="hobby-card" onclick="showHobbySmall('hiking')">
                     <h3>Hiking</h3>
+                    <img src="img/hiking.jpg" alt="Hiking">
                 </div>
-                <div class="hobby-card"><img src="img/fishing.jpg" alt="Fishing">
+                <div class="hobby-card" onclick="showHobbySmall('fishing')">
                     <h3>Fishing</h3>
+                    <img src="img/fishing.jpg" alt="Fishing">
                 </div>
-                <div class="hobby-card"><img src="img/photography.jpg" alt="Photography">
+                <div class="hobby-card" onclick="showHobbySmall('photography')">
                     <h3>Photography</h3>
+                    <img src="img/photography.jpg" alt="Photography">
                 </div>
-                <div class="hobby-card"><img src="img/writing.jpg" alt="Writing">
+                <div class="hobby-card" onclick="showHobbySmall('writing')">
                     <h3>Writing</h3>
+                    <img src="img/writing.jpg" alt="Writing">
                 </div>
-                <div class="hobby-card"><img src="img/reading.jpg" alt="Reading">
+                <div class="hobby-card" onclick="showHobbySmall('reading')">
                     <h3>Reading</h3>
+                    <img src="img/reading.jpg" alt="Reading">
                 </div>
-                <div class="hobby-card"><img src="img/scuba.jpg" alt="SCUBA">
+                <div class="hobby-card" onclick="showHobbySmall('scuba')">
                     <h3>SCUBA Diving</h3>
+                    <img src="img/scuba.jpg" alt="SCUBA">
+                </div>
+                <div class="hiking-explanation-small">
+                    <button onclick="hideHobbySmall('hiking')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Hiking</h2>
+                    <p>
+                        Hiking is one of my most life-giving hobbies. Being outside in forests, creeks,
+                        or
+                        anywhere else that I can bask in the beauty of nature is my happy place. It
+                        really
+                        is as simple as that.
+                    </p>
+                </div>
+                <div class="fishing-explanation-small">
+                    <button onclick="hideHobbySmall('fishing')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Fishing</h2>
+                    <p>
+                        I find fishing to be either medatative or an excellent bonding experience. I can
+                        sit there in silence for hours, enjoying the sun and the water, or I can be with
+                        friends and family, laughing and joking as we wait on the next bite. Some of the
+                        best
+                        days fishing happen even when you don't catch anything.
+                    </p>
+                </div>
+                <div class="photography-explanation-small">
+                    <button onclick="hideHobbySmall('photography')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Photography</h2>
+                    <p>
+                        Photography is not just a creative outlet for me. It is an opportunity to learn
+                        and
+                        master
+                        new skills with a camera, drone, and editing software. I love the fact that it
+                        quite
+                        literally
+                        encourages me to look at things from different perspectives and challenges me to
+                        look beyond the
+                        initial appearance. It helps give me a tangible reminder of the depth that lies
+                        just
+                        under
+                        the surface and the power of intentionality.
+                    </p>
+                </div>
+                <div class="writing-explanation-small">
+                    <button onclick="hideHobbySmall('writing')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Writing</h2>
+                    <p>
+                        Writing is a chance for me to get my thoughts down. These may take the form of a
+                        journal, a written prayer,
+                        an essay about something I am passionate about, or even a fictional story. I
+                        love
+                        the opportunity to process
+                        my thoughts and then wrestle them into something cohesive, concise, and
+                        comprehensible.
+                    </p>
+                </div>
+                <div class="reading-explanation-small">
+                    <button onclick="hideHobbySmall('reading')"><i class="fa-solid fa-close"></i></button>
+                    <h2>Reading</h2>
+                    <p>
+                        Reading is a chance for me to learn and grow as well as an opportunity to relax
+                        and
+                        escape.
+                        I have found that I am able to do all four reading or listening to fiction and
+                        non-fiction.
+                        I find fiction has lessons that it teaches through its world and characters and
+                        non-fiction can create a
+                        space for me to lean into and embrace as it creates illustrations of the past
+                        and
+                        lessons we can learn.
+                    </p>
+                </div>
+                <div class="scuba-explanation-small">
+                    <button onclick="hideHobbySmall('scuba')"><i class="fa-solid fa-close"></i></button>
+                    <h2>SCUBA Diving</h2>
+                    <p>
+                        SCUBA diving feels like home. I love the water and I always have. Being
+                        submerged
+                        and witnessing the beauty of
+                        underwater life is a gift. If I had enough air, I could stay down for hours,
+                        just
+                        watching the ecosystem
+                        around me. I love seeing the fish exhibit their natural behaviors and, much like
+                        hiking, basking in the
+                        beauty of nature.
+                    </p>
                 </div>
             </div>
         </section>

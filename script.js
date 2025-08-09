@@ -161,6 +161,80 @@ const hideAboutMeSmall = (name) => {
   }
 }
 
+const showBookSmall = (name) => {
+  console.log(`Calling showBookSmall with name: .${name}-explanation-small`);
+  const bookDiv = document.querySelector(`.${name}-explanation-small`);
+  if (bookDiv) {
+    bookDiv.classList.add('visible');
+  }
+}
+
+const hideBookSmall = (name) => {
+  console.log("Calling hideBookSmall with name:", name);
+  const bookDiv = document.querySelector(`.${name}-explanation-small`);
+  if (bookDiv) {
+    bookDiv.classList.remove('visible');
+  }
+}
+
+const showBachelorsSmall = (e) => {
+  console.log("showBachelorsSmall called"); // Debugging line
+  e.stopPropagation(); // Prevent event bubbling
+  e.preventDefault(); // Prevent default action if necessary
+  console.log("Calling showBachelorsSmall");
+  const bachelorsDiv = document.querySelector('.bachelors-small');
+  if (bachelorsDiv) {
+    bachelorsDiv.classList.add('visible');
+  }
+}
+
+const showMastersSmall = (e) => {
+  console.log("showMastersSmall called"); // Debugging line
+  e.stopPropagation(); // Prevent event bubbling
+  e.preventDefault(); // Prevent default action if necessary
+  console.log("Calling showMastersSmall");
+  const mastersDiv = document.querySelector('.masters-small');
+  if (mastersDiv) {
+    mastersDiv.classList.add('visible');
+  }
+}
+
+const hideBachelorsSmall = (e) => {
+  e.stopPropagation(); // Prevent event bubbling
+  e.preventDefault(); // Prevent default action if necessary
+  console.log("Calling hideBachelorsSmall");
+  const bachelorsDiv = document.querySelector('.bachelors-small');
+  if (bachelorsDiv) {
+    bachelorsDiv.classList.remove('visible');
+  }
+}
+
+const hideMastersSmall = (e) => {
+  e.stopPropagation(); // Prevent event bubbling
+  e.preventDefault(); // Prevent default action if necessary
+  console.log("Calling hideMastersSmall");
+  const mastersDiv = document.querySelector('.masters-small');
+  if (mastersDiv) {
+    mastersDiv.classList.remove('visible');
+  }
+}
+
+const showHobbySmall = (name) => {
+  console.log("Calling showHobbySmall with name:", name);
+  const hobbyDiv = document.querySelector(`.${name}-explanation-small`);
+  if (hobbyDiv) {
+    hobbyDiv.classList.add('visible');
+  }
+}
+
+const hideHobbySmall = (name) => {
+  console.log("Calling hideHobbySmall with name:", name);
+  const hobbyDiv = document.querySelector(`.${name}-explanation-small`);
+  if (hobbyDiv) {
+    hobbyDiv.classList.remove('visible');
+  }
+}
+
 adjustPhotos() = () => {
   const photos = document.querySelectorAll('.photo-gallery .photo');
   const positions = [

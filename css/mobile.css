@@ -131,6 +131,7 @@
         from {
             height: 22vh;
         }
+
         to {
             height: 72vh;
         }
@@ -162,4 +163,241 @@
         margin-bottom: 1rem;
         gap: 1rem;
     }
+
+    .bible-explanation-small,
+    .ownership-explanation-small,
+    .habits-explanation-small,
+    .wrong-explanation-small,
+    .growth-explanation-small,
+    .dare-explanation-small,
+    .leadership-explanation-small,
+    .lotr-explanation-small {
+        display: none;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-top: 1rem;
+        color: #333;
+        position: absolute;
+        z-index: 990;
+        height: 57vh;
+        width: 73vw;
+    }
+
+    .bible-explanation-small.visible,
+    .ownership-explanation-small.visible,
+    .habits-explanation-small.visible,
+    .wrong-explanation-small.visible,
+    .growth-explanation-small.visible,
+    .dare-explanation-small.visible,
+    .leadership-explanation-small.visible,
+    .lotr-explanation-small.visible {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: solid 3px purple;
+    }
+
+    .ownership-explanation-small.visible {
+        margin-left: 87.5vw;
+    }
+
+    .habits-explanation-small.visible {
+        margin-left: 175vw;
+    }
+
+    .wrong-explanation-small.visible {
+        margin-left: 262.5vw;
+    }
+
+    .growth-explanation-small.visible {
+        margin-left: 350.5vw;
+    }
+
+    .dare-explanation-small.visible {
+        margin-left: 438vw;
+    }
+
+    .leadership-explanation-small.visible {
+        margin-left: 526vw;
+    }
+
+    .lotr-explanation-small.visible {
+        margin-left: 614vw;
+    }
+
+    .books {
+        overflow-x: scroll;
+        height: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
+    .book-card {
+        flex: 0 0 auto;
+        width: 75vw;
+        margin-right: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .book-card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .hobbies {
+        overflow-x: scroll;
+        height: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        height: 63vh;
+    }
+
+    .hobby-card {
+        flex: 0 0 auto;
+        width: 75vw;
+        height: 90%;
+        margin-right: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .hobby-card img {
+        width: 100%;
+        height: 95%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .hiking-explanation-small,
+    .fishing-explanation-small,
+    .photography-explanation-small,
+    .writing-explanation-small,
+    .reading-explanation-small,
+    .scuba-explanation-small {
+        display: none;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-top: 1rem;
+        color: #333;
+        position: absolute;
+        z-index: 990;
+        height: 56vh;
+        width: 73vw;
+    }
+
+    .hiking-explanation-small.visible,
+    .fishing-explanation-small.visible,
+    .photography-explanation-small.visible,
+    .writing-explanation-small.visible,
+    .reading-explanation-small.visible,
+    .scuba-explanation-small.visible {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: solid 3px purple;
+    }
+
+    .fishing-explanation-small.visible {
+        margin-left: calc(87.5vw + .5rem);
+    }
+
+    .photography-explanation-small.visible {
+        margin-left: calc(175vw + .75rem);
+    }
+
+    .writing-explanation-small.visible {
+        margin-left: calc(262.5vw + 1rem);
+    }
+
+    .reading-explanation-small.visible {
+        margin-left: calc(350.5vw + 1rem);
+    }
+
+    .scuba-explanation-small.visible {
+        margin-left: calc(438vw + 1rem);
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: space-around;
+        position: relative;
+        height: 50vh;
+        gap: 24px;
+        width: 90%;
+    }
+
+    .edu-card {
+        width: 100%;
+    }
+
+    .bachelors-small,
+    .masters-small {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        position: absolute;
+        overflow-x: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        z-index: -3;
+        line-height: 2rem;
+        width: 90vw;
+        margin-left: 1rem;
+        height: 20vh;
+        background-color: rgba(255, 255, 255, 1);
+        overflow-x: auto;
+        overflow-y: auto;
+        pointer-events: all;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out; height .3s ease-in-out;
+    }
+
+    .bachelors-small.visible,
+    .masters-small.visible {
+        opacity: 1;
+        z-index: 13;
+        transform: translate(-50%, -50%) scale(1);
+        height: 57vh;
+        margin-bottom: 2rem;
+    }
+
+    .masters-small button,
+    .bachelors-small button {
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        right: 0;
+        border: none;
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .bachelors-small-card,
+    .masters-small-card {
+        width: 95%;
+        height: 100%;
+        min-width: 95%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
 }
