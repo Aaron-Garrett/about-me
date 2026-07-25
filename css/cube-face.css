@@ -39,6 +39,9 @@
     text-align: left;
     margin: .5rem;
     overflow-x: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
 }
 
 .left-cube .about-me p,
@@ -48,6 +51,8 @@
 .bottom .education p {
     overflow-y: auto;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
 }
 
 .home-nav {

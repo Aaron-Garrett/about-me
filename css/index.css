@@ -183,7 +183,7 @@ html, body {
   inset: 0;
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   grid-template-areas:
     "box-1 box-2 box-2"
@@ -192,8 +192,9 @@ html, body {
   background-color: transparent;
   backdrop-filter: blur(0.2rem);
   width: 95%;
-  height: fit-content;
+  height: 100%;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 @property --angle {
@@ -207,9 +208,8 @@ html, body {
   position: relative;
   display: block;
   width: 100%;
-  /* Adjust width as needed */
-  height: auto;
-  /* Maintains aspect ratio */
+  height: 100%;
+  overflow: hidden;
 }
 
 .homepage .box img {

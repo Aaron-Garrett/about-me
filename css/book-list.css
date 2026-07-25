@@ -119,6 +119,8 @@
     border-radius: 10px;
     text-align: start;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
     height: 85%;
     width: 90%;
 }
@@ -150,6 +152,8 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
         align-items: center;
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
@@ -213,6 +217,8 @@
     .lotr-explanation p {
         font-size: clamp(7px, .5rem, 24px);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
     }
 
     .bible-explanation h2,

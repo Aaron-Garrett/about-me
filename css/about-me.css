@@ -195,6 +195,8 @@
     padding: .75rem;
     text-align: start;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
     border-radius: 10px;
     height: 90%;
     width: 90%;
@@ -301,6 +303,7 @@
     .goals p {
         font-size: clamp(7px, .5rem, 24px);
         -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
         overflow-y: auto;
         overscroll-behavior: contain;
         height: 700px;
@@ -310,6 +313,7 @@
     .about-me-topics {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
     }
 
 }

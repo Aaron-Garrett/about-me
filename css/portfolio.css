@@ -1,12 +1,11 @@
 .portfolio {
     display: flex;
-    /* Add this */
     flex-direction: column;
     height: 100%;
     max-height: 100%;
-    /* Add this */
     overflow: auto;
-    /* Add this to handle overflow content */
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
     background-color: rgba(0, 0, 0, 0.65);
 }
 
