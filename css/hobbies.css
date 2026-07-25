@@ -127,6 +127,7 @@
     padding: .75rem;
     border-radius: 10px;
     text-align: start;
+    color: white;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transform: translateZ(0);
