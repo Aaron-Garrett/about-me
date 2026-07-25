@@ -79,51 +79,18 @@
                                 <img src="./img/goals.jpg" alt="Profile 4">
                             </div>
                         </div>
-                        <div class="about-me-topics">
-                            <div class="where-from">
-                                <button onclick="hideAboutMe('where-from')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Where I'm From</h2>
-                                <p>
-                                    I grew up in Plainfield, Indiana, having gone to Avon High School. I then went to
-                                    Indiana University, where I got my Bachelor's and Master's degrees. I now live in a
-                                    suburb
-                                    of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions
-                                    Architect.
-                                    While having spent my life in Indiana, I have traveled to many places, including
-                                    other countries such as Israel and Australia.
-                                </p>
+                        <div class="about-me-cards">
+                            <div class="about-me-card" onclick="showAboutMe('where-from')">
+                                <h3>Where I'm From</h3>
+                                <p>Plainfield, Indiana &rarr; Indiana University &rarr; Indianapolis</p>
                             </div>
-                            <div class="passions">
-                                <button onclick="hideAboutMe('passions')"><i class="fa-solid fa-close"></i></button>
-                                <h2>What are my passions?</h2>
-                                <p>
-                                    1. Faith. My faith is the most important thing in my life. I strive to live my life
-                                    in a way that lives out my faith and its foundational principles.<br>
-                                    2. People. This is number one because my greatest passion is to pour into people and
-                                    help them become the best version of themselves.<br>
-                                    3. Nature. I love being outside. The beauty of nature is second to none and feeling
-                                    the breeze as I walk through the wonder of nature gives me more life than anything
-                                    else.<br>
-                                    4. Learning. I love learning new things. I love to build as I often see the results
-                                    of what I am learning in a very tangible way. This can be building websites,
-                                    woodworking, or even just
-                                    some yard work.<br>
-                                    5. Family. Family is what gets me out of bed in the morning. I wake up
-                                    every day to my favorite people.
-                                </p>
+                            <div class="about-me-card" onclick="showAboutMe('passions')">
+                                <h3>My Passions</h3>
+                                <p>Faith, people, nature, learning, and family</p>
                             </div>
-                            <div class="goals">
-                                <button onclick="hideAboutMe('goals')"><i class="fa-solid fa-close"></i></button>
-                                <h2>What are my goals?</h2>
-                                <p>
-                                    1. I strive to honor G-d with my life.<br>
-                                    2. I strive to live out my family's guiding principals.<br>
-                                    3. I strive to be the best husband and father I can be.<br>
-                                    4. I strive to be a leader who pours into others and helps them grow.<br>
-                                    5. I strive to be a person who is known for their integrity and honesty.<br>
-                                    6. I strive to be patient and kind, quick to listen, and empathetic.<br>
-                                    7. I strive to use my life to truly help as many people as I can.
-                                </p>
+                            <div class="about-me-card" onclick="showAboutMe('goals')">
+                                <h3>My Goals</h3>
+                                <p>Honor G-d, lead with integrity, help others grow</p>
                             </div>
                         </div>
                     </div>
@@ -172,108 +139,6 @@
                             </div>
                             <div class="book-img" onclick="growBook('lotr')">
                                 <img src="./img/lord-of-the-rings.jpg" alt="The Lord of the Rings" />
-                            </div>
-                        </div>
-                        <div class="book-explanations">
-                            <div class="bible-explanation">
-                                <button onclick="hideBook('bible')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. G-d loves us enough to die for us, and we are to love each other in the same
-                                    way<br>
-                                    2. We are all "very good," but have the capacity for evil<br>
-                                    3. It is okay to feel difficult emotions<br>
-                                    4. Questions are pathways to deeper exploration and understanding<br>
-                                    5. We are to be the best stewards of the world around us as we are able<br>
-                                </p>
-                            </div>
-                            <div class="ownership-explanation">
-                                <button onclick="hideBook('ownership')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Own everything you can as it enables you to control what you can<br>
-                                    2. You need to lead up the chain of command as well<br>
-                                    3. There are no bad teams, only bad leaders<br>
-                                    4. Empower those around you, enable decentralized command<br>
-                                    5. Discipline = Freedom<br>
-                                </p>
-                            </div>
-
-                            <div class="habits-explanation">
-                                <button onclick="hideBook('habits')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Make it obvious, attractive, easy, and satisfying<br>
-                                    2. Reverse #1 to break bad habits<br>
-                                    3. Habits only need two minutes to start being built<br>
-                                    4. Progress starts slow, but takes off the longer you do it<br>
-                                    5. The environment is important to building habits<br>
-                                </p>
-                            </div>
-
-                            <div class="wrong-explanation">
-                                <button onclick="hideBook('wrong')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Being wrong often leads to new discoveries<br>
-                                    2. People often are scared of being wrong, which is elevated in groups </br>
-                                    3. Being wrong is a strength if you use it to learn new things and connect
-                                    authentically<br>
-                                    4. Being able to admit being wrong can lead to relief and even joy<br>
-                                    5. We need to build a culture where being wrong is acceptable and touted as
-                                    a positive force<br>
-                                </p>
-                            </div>
-
-                            <div class="growth-explanation">
-                                <button onclick="hideBook('growth')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Growth requires intentionality<br>
-                                    2. Growth requires personal reflection<br>
-                                    3. Growth requires stretching beyond your comfort zone<br>
-                                    4. Pain and hardship, if harnessed, can lead to growth<br>
-                                    5. Asking questions is essential to growth<br>
-                                </p>
-                            </div>
-
-                            <div class="dare-explanation">
-                                <button onclick="hideBook('dare')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Vulnerability is not weakness<br>
-                                    2. Courage is not the absence of fear<br>
-                                    3. A good leader is willing to rumble<br>
-                                    4. Safe workspaces are not created by hiding from conflict<br>
-                                    5. Trust is built in small moments<br>
-                                </p>
-                            </div>
-
-                            <div class="leadership-explanation">
-                                <button onclick="hideBook('leadership')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Leadership requires growing relationships and building relationship
-                                    capital<br>
-                                    2. Success is limited by a leader's abilities, and those are grown with
-                                    daily processes<br>
-                                    3. Leaders capitalize on momentum<br>
-                                    4. Leaders build other leaders<br>
-                                    5. Leadership requires getting people to buy in<br>
-                                </p>
-                            </div>
-
-                            <div class="lotr-explanation">
-                                <button onclick="hideBook('lotr')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Key Takeaways:</h2>
-                                <p>
-                                    1. Even the things een as insignificant have immense power<br>
-                                    2. The desire for good, if untamed, can lead to back outcomes<br>
-                                    3. A leader is humble, but not self-effacing with serving others<br>
-                                    4. "All we have to do is decide what to do with the time that is given to
-                                    us."<br>
-                                    5. Having an open mind can open you to incredible new experiences<br>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -413,80 +278,6 @@
                                 3. Enterprise Resource Planning<br>
                             </p>
                         </div>
-                        <div class="education-pop-ups">
-                            <div class="bachelors">
-                                <div class="bachelors-card">
-                                    <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
-                                    <h2>Information Systems</h2>
-                                    <p>
-                                        This degree focused mostly on technological foundations. This includes
-                                        things such as getting intimately familiar with Excel, understanding
-                                        databases
-                                        and SQL, learning some fundamental programming, how to tranlsate business
-                                        needs
-                                        into user stories and technical requirements, and how internet and
-                                        infrastructure works.
-                                    </p>
-                                </div>
-                                <div class="bachelors-card">
-                                    <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
-                                    <h2>Management</h2>
-                                    <p>
-                                        This degree focused on people. This ranged from the nuiances of
-                                        international
-                                        business, to a thorough understanding of HR and its functions, and included
-                                        things such as change management and organizational structures.
-                                    </p>
-                                </div>
-                                <div class="bachelors-card">
-                                    <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
-                                    <h2>Business Law, Ethics, and Decision Making</h2>
-                                    <p>
-                                        This degree focused on understanding the legal and ethical implications of
-                                        business decisions. This includes things such as contract law, tort law, and
-                                        the different ethical frameworks that can be used to make decisions.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="masters">
-                                <div class="masters-card">
-                                    <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
-                                    <h2>Cybersecurity</h2>
-                                    <p>
-                                        This concentration was dedicated to preparing
-                                        students to pass the CISSP exam, excluding vocabulary. It was all about
-                                        concepts: the fundamentals of
-                                        cybersecurity, how hackers work, understanding encryption, and the legality
-                                        around cybersecurity.
-                                    </p>
-                                </div>
-                                <div class="masters-card">
-                                    <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
-                                    <h2>Business Intelligence and Analytics</h2>
-                                    <p>
-                                        This
-                                        concentration was dedicated to
-                                        understanding and building supervised learning models and how to make
-                                        decisions
-                                        based on the results of those models.
-                                        It also dug into unsupervised learning models, providing a foundation and
-                                        understanding to move into the AI world.
-                                    </p>
-                                </div>
-                                <div class="masters-card">
-                                    <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
-                                    <h2>Enterprise Resource Planning</h2>
-                                    <p>
-                                        This
-                                        concentration was dedicated to understanding how
-                                        ERP systems work. It specialized in understanding how SAP works and
-                                        demonstrating
-                                        our knowledge by building a system from
-                                        Company Code up. Twice.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="home-nav"><button class="control home-button"
                             onclick="console.log(`X: ${rotationX}, Y: ${rotationY}`); resetCube()"><i
@@ -524,92 +315,6 @@
                             </div>
                             <div class="hobby-photo scuba" style="grid-area: photo-6" onclick="showHobby('scuba')">
                                 <img src="./img/scuba.jpg" alt="SCUBA">
-                            </div>
-                        </div>
-                        <div class="hobby-explanations">
-                            <div class="hiking-explanation">
-                                <button onclick="hideHobby('hiking')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Hiking</h2>
-                                <p>
-                                    Hiking is one of my most life-giving hobbies. Being outside in forests, creeks,
-                                    or
-                                    anywhere else that I can bask in the beauty of nature is my happy place. It
-                                    really
-                                    is as simple as that.
-                                </p>
-                            </div>
-                            <div class="fishing-explanation">
-                                <button onclick="hideHobby('fishing')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Fishing</h2>
-                                <p>
-                                    I find fishing to be either medatative or an excellent bonding experience. I can
-                                    sit there in silence for hours, enjoying the sun and the water, or I can be with
-                                    friends and family, laughing and joking as we wait on the next bite. Some of the
-                                    best
-                                    days fishing happen even when you don't catch anything.
-                                </p>
-                            </div>
-                            <div class="photography-explanation">
-                                <button onclick="hideHobby('photography')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Photography</h2>
-                                <p>
-                                    Photography is not just a creative outlet for me. It is an opportunity to learn
-                                    and
-                                    master
-                                    new skills with a camera, drone, and editing software. I love the fact that it
-                                    quite
-                                    literally
-                                    encourages me to look at things from different perspectives and challenges me to
-                                    look beyond the
-                                    initial appearance. It helps give me a tangible reminder of the depth that lies
-                                    just
-                                    under
-                                    the surface and the power of intentionality.
-                                </p>
-                            </div>
-                            <div class="writing-explanation">
-                                <button onclick="hideHobby('writing')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Writing</h2>
-                                <p>
-                                    Writing is a chance for me to get my thoughts down. These may take the form of a
-                                    journal, a written prayer,
-                                    an essay about something I am passionate about, or even a fictional story. I
-                                    love
-                                    the opportunity to process
-                                    my thoughts and then wrestle them into something cohesive, concise, and
-                                    comprehensible.
-                                </p>
-                            </div>
-                            <div class="reading-explanation">
-                                <button onclick="hideHobby('reading')"><i class="fa-solid fa-close"></i></button>
-                                <h2>Reading</h2>
-                                <p>
-                                    Reading is a chance for me to learn and grow as well as an opportunity to relax
-                                    and
-                                    escape.
-                                    I have found that I am able to do all four reading or listening to fiction and
-                                    non-fiction.
-                                    I find fiction has lessons that it teaches through its world and characters and
-                                    non-fiction can create a
-                                    space for me to lean into and embrace as it creates illustrations of the past
-                                    and
-                                    lessons we can learn.
-                                </p>
-                            </div>
-                            <div class="scuba-explanation">
-                                <button onclick="hideHobby('scuba')"><i class="fa-solid fa-close"></i></button>
-                                <h2>SCUBA Diving</h2>
-                                <p>
-                                    SCUBA diving feels like home. I love the water and I always have. Being
-                                    submerged
-                                    and witnessing the beauty of
-                                    underwater life is a gift. If I had enough air, I could stay down for hours,
-                                    just
-                                    watching the ecosystem
-                                    around me. I love seeing the fish exhibit their natural behaviors and, much like
-                                    hiking, basking in the
-                                    beauty of nature.
-                                </p>
                             </div>
                         </div>
                         <!-- <p>
@@ -659,6 +364,310 @@
                         class="fa-solid fa-house"></i></button>
             </div> -->
     </main>
+    <nav id="mobile-tabbar">
+        <button onclick="resetCube()"><i class="fa-solid fa-house"></i><span>Home</span></button>
+        <button onclick="rotateUp()"><i class="fa-solid fa-briefcase"></i><span>Portfolio</span></button>
+        <button onclick="rotateRight()"><i class="fa-solid fa-book"></i><span>Books</span></button>
+        <button onclick="rotateDown()"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></button>
+        <button onclick="rotateBack()"><i class="fa-solid fa-person-hiking"></i><span>Hobbies</span></button>
+    </nav>
+    <div id="overlays">
+        <div class="where-from">
+            <button onclick="hideAboutMe('where-from')"><i class="fa-solid fa-close"></i></button>
+            <h2>Where I'm From</h2>
+            <p>
+                I grew up in Plainfield, Indiana, having gone to Avon High School. I then went to
+                Indiana University, where I got my Bachelor's and Master's degrees. I now live in a
+                suburb
+                of Indianapolis, Indiana, where I work at Eli Lilly and Company as a Solutions
+                Architect.
+                While having spent my life in Indiana, I have traveled to many places, including
+                other countries such as Israel and Australia.
+            </p>
+        </div>
+        <div class="passions">
+            <button onclick="hideAboutMe('passions')"><i class="fa-solid fa-close"></i></button>
+            <h2>What are my passions?</h2>
+            <p>
+                1. Faith. My faith is the most important thing in my life. I strive to live my life
+                in a way that lives out my faith and its foundational principles.<br>
+                2. People. This is number one because my greatest passion is to pour into people and
+                help them become the best version of themselves.<br>
+                3. Nature. I love being outside. The beauty of nature is second to none and feeling
+                the breeze as I walk through the wonder of nature gives me more life than anything
+                else.<br>
+                4. Learning. I love learning new things. I love to build as I often see the results
+                of what I am learning in a very tangible way. This can be building websites,
+                woodworking, or even just
+                some yard work.<br>
+                5. Family. Family is what gets me out of bed in the morning. I wake up
+                every day to my favorite people.
+            </p>
+        </div>
+        <div class="goals">
+            <button onclick="hideAboutMe('goals')"><i class="fa-solid fa-close"></i></button>
+            <h2>What are my goals?</h2>
+            <p>
+                1. I strive to honor G-d with my life.<br>
+                2. I strive to live out my family's guiding principals.<br>
+                3. I strive to be the best husband and father I can be.<br>
+                4. I strive to be a leader who pours into others and helps them grow.<br>
+                5. I strive to be a person who is known for their integrity and honesty.<br>
+                6. I strive to be patient and kind, quick to listen, and empathetic.<br>
+                7. I strive to use my life to truly help as many people as I can.
+            </p>
+        </div>
+        <div class="bible-explanation">
+            <button onclick="hideBook('bible')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. G-d loves us enough to die for us, and we are to love each other in the same
+                way<br>
+                2. We are all "very good," but have the capacity for evil<br>
+                3. It is okay to feel difficult emotions<br>
+                4. Questions are pathways to deeper exploration and understanding<br>
+                5. We are to be the best stewards of the world around us as we are able<br>
+            </p>
+        </div>
+        <div class="ownership-explanation">
+            <button onclick="hideBook('ownership')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Own everything you can as it enables you to control what you can<br>
+                2. You need to lead up the chain of command as well<br>
+                3. There are no bad teams, only bad leaders<br>
+                4. Empower those around you, enable decentralized command<br>
+                5. Discipline = Freedom<br>
+            </p>
+        </div>
+        <div class="habits-explanation">
+            <button onclick="hideBook('habits')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Make it obvious, attractive, easy, and satisfying<br>
+                2. Reverse #1 to break bad habits<br>
+                3. Habits only need two minutes to start being built<br>
+                4. Progress starts slow, but takes off the longer you do it<br>
+                5. The environment is important to building habits<br>
+            </p>
+        </div>
+        <div class="wrong-explanation">
+            <button onclick="hideBook('wrong')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Being wrong often leads to new discoveries<br>
+                2. People often are scared of being wrong, which is elevated in groups </br>
+                3. Being wrong is a strength if you use it to learn new things and connect
+                authentically<br>
+                4. Being able to admit being wrong can lead to relief and even joy<br>
+                5. We need to build a culture where being wrong is acceptable and touted as
+                a positive force<br>
+            </p>
+        </div>
+        <div class="growth-explanation">
+            <button onclick="hideBook('growth')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Growth requires intentionality<br>
+                2. Growth requires personal reflection<br>
+                3. Growth requires stretching beyond your comfort zone<br>
+                4. Pain and hardship, if harnessed, can lead to growth<br>
+                5. Asking questions is essential to growth<br>
+            </p>
+        </div>
+        <div class="dare-explanation">
+            <button onclick="hideBook('dare')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Vulnerability is not weakness<br>
+                2. Courage is not the absence of fear<br>
+                3. A good leader is willing to rumble<br>
+                4. Safe workspaces are not created by hiding from conflict<br>
+                5. Trust is built in small moments<br>
+            </p>
+        </div>
+        <div class="leadership-explanation">
+            <button onclick="hideBook('leadership')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Leadership requires growing relationships and building relationship
+                capital<br>
+                2. Success is limited by a leader's abilities, and those are grown with
+                daily processes<br>
+                3. Leaders capitalize on momentum<br>
+                4. Leaders build other leaders<br>
+                5. Leadership requires getting people to buy in<br>
+            </p>
+        </div>
+        <div class="lotr-explanation">
+            <button onclick="hideBook('lotr')"><i class="fa-solid fa-close"></i></button>
+            <h2>Key Takeaways:</h2>
+            <p>
+                1. Even the things een as insignificant have immense power<br>
+                2. The desire for good, if untamed, can lead to back outcomes<br>
+                3. A leader is humble, but not self-effacing with serving others<br>
+                4. "All we have to do is decide what to do with the time that is given to
+                us."<br>
+                5. Having an open mind can open you to incredible new experiences<br>
+            </p>
+        </div>
+        <div class="hiking-explanation">
+            <button onclick="hideHobby('hiking')"><i class="fa-solid fa-close"></i></button>
+            <h2>Hiking</h2>
+            <p>
+                Hiking is one of my most life-giving hobbies. Being outside in forests, creeks,
+                or
+                anywhere else that I can bask in the beauty of nature is my happy place. It
+                really
+                is as simple as that.
+            </p>
+        </div>
+        <div class="fishing-explanation">
+            <button onclick="hideHobby('fishing')"><i class="fa-solid fa-close"></i></button>
+            <h2>Fishing</h2>
+            <p>
+                I find fishing to be either medatative or an excellent bonding experience. I can
+                sit there in silence for hours, enjoying the sun and the water, or I can be with
+                friends and family, laughing and joking as we wait on the next bite. Some of the
+                best
+                days fishing happen even when you don't catch anything.
+            </p>
+        </div>
+        <div class="photography-explanation">
+            <button onclick="hideHobby('photography')"><i class="fa-solid fa-close"></i></button>
+            <h2>Photography</h2>
+            <p>
+                Photography is not just a creative outlet for me. It is an opportunity to learn
+                and
+                master
+                new skills with a camera, drone, and editing software. I love the fact that it
+                quite
+                literally
+                encourages me to look at things from different perspectives and challenges me to
+                look beyond the
+                initial appearance. It helps give me a tangible reminder of the depth that lies
+                just
+                under
+                the surface and the power of intentionality.
+            </p>
+        </div>
+        <div class="writing-explanation">
+            <button onclick="hideHobby('writing')"><i class="fa-solid fa-close"></i></button>
+            <h2>Writing</h2>
+            <p>
+                Writing is a chance for me to get my thoughts down. These may take the form of a
+                journal, a written prayer,
+                an essay about something I am passionate about, or even a fictional story. I
+                love
+                the opportunity to process
+                my thoughts and then wrestle them into something cohesive, concise, and
+                comprehensible.
+            </p>
+        </div>
+        <div class="reading-explanation">
+            <button onclick="hideHobby('reading')"><i class="fa-solid fa-close"></i></button>
+            <h2>Reading</h2>
+            <p>
+                Reading is a chance for me to learn and grow as well as an opportunity to relax
+                and
+                escape.
+                I have found that I am able to do all four reading or listening to fiction and
+                non-fiction.
+                I find fiction has lessons that it teaches through its world and characters and
+                non-fiction can create a
+                space for me to lean into and embrace as it creates illustrations of the past
+                and
+                lessons we can learn.
+            </p>
+        </div>
+        <div class="scuba-explanation">
+            <button onclick="hideHobby('scuba')"><i class="fa-solid fa-close"></i></button>
+            <h2>SCUBA Diving</h2>
+            <p>
+                SCUBA diving feels like home. I love the water and I always have. Being
+                submerged
+                and witnessing the beauty of
+                underwater life is a gift. If I had enough air, I could stay down for hours,
+                just
+                watching the ecosystem
+                around me. I love seeing the fish exhibit their natural behaviors and, much like
+                hiking, basking in the
+                beauty of nature.
+            </p>
+        </div>
+        <div class="bachelors">
+            <div class="bachelors-card">
+                <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
+                <h2>Information Systems</h2>
+                <p>
+                    This degree focused mostly on technological foundations. This includes
+                    things such as getting intimately familiar with Excel, understanding
+                    databases
+                    and SQL, learning some fundamental programming, how to tranlsate business
+                    needs
+                    into user stories and technical requirements, and how internet and
+                    infrastructure works.
+                </p>
+            </div>
+            <div class="bachelors-card">
+                <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
+                <h2>Management</h2>
+                <p>
+                    This degree focused on people. This ranged from the nuiances of
+                    international
+                    business, to a thorough understanding of HR and its functions, and included
+                    things such as change management and organizational structures.
+                </p>
+            </div>
+            <div class="bachelors-card">
+                <button onclick="hideBachelors(event)"><i class="fa-solid fa-close"></i></button>
+                <h2>Business Law, Ethics, and Decision Making</h2>
+                <p>
+                    This degree focused on understanding the legal and ethical implications of
+                    business decisions. This includes things such as contract law, tort law, and
+                    the different ethical frameworks that can be used to make decisions.
+                </p>
+            </div>
+        </div>
+        <div class="masters">
+            <div class="masters-card">
+                <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
+                <h2>Cybersecurity</h2>
+                <p>
+                    This concentration was dedicated to preparing
+                    students to pass the CISSP exam, excluding vocabulary. It was all about
+                    concepts: the fundamentals of
+                    cybersecurity, how hackers work, understanding encryption, and the legality
+                    around cybersecurity.
+                </p>
+            </div>
+            <div class="masters-card">
+                <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
+                <h2>Business Intelligence and Analytics</h2>
+                <p>
+                    This
+                    concentration was dedicated to
+                    understanding and building supervised learning models and how to make
+                    decisions
+                    based on the results of those models.
+                    It also dug into unsupervised learning models, providing a foundation and
+                    understanding to move into the AI world.
+                </p>
+            </div>
+            <div class="masters-card">
+                <button onclick="hideMasters(event)"><i class="fa-solid fa-close"></i></button>
+                <h2>Enterprise Resource Planning</h2>
+                <p>
+                    This
+                    concentration was dedicated to understanding how
+                    ERP systems work. It specialized in understanding how SAP works and
+                    demonstrating
+                    our knowledge by building a system from
+                    Company Code up. Twice.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

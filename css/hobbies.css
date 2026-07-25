@@ -95,7 +95,7 @@
 .reading-explanation.visible,
 .scuba-explanation.visible {
     opacity: 1;
-    z-index: 7;
+    z-index: 40;
     transform: translate(-50%, -50%) scale(1);
 }
 

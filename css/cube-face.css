@@ -116,4 +116,21 @@
         color: white;
         overflow: auto;
     }
+
+    .top-nav,
+    .bottom-nav,
+    .side-nav-left,
+    .side-nav-right,
+    .home-nav {
+        display: none;
+    }
+
+    .left-cube .about-me,
+    .right-cube .book-list,
+    .back-cube .hobbies,
+    .top .portfolio,
+    .bottom .education {
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+    }
 }

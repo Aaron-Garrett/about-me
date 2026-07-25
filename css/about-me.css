@@ -158,10 +158,15 @@
     object-fit: cover;
 }
 
+.about-me-cards {
+    display: none;
+}
+
 .where-from,
 .passions,
 .goals {
-    position: absolute;
+    position: fixed;
+    top: 50%;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     width: 100%;
@@ -219,7 +224,7 @@
 .passions.visible,
 .goals.visible {
     opacity: 1;
-    z-index: 7;
+    z-index: 40;
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -289,7 +294,34 @@
 
 
     .triangles {
-        height: 27vh;
+        display: none;
+    }
+
+    .about-me-cards {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        width: 90%;
+        padding: 1rem 0;
+    }
+
+    .about-me-card {
+        background-color: rgba(0, 0, 0, 0.65);
+        border-radius: 10px;
+        padding: .75rem 1rem;
+        cursor: pointer;
+    }
+
+    .about-me-card h3 {
+        margin: 0 0 .25rem;
+        font-size: clamp(9px, .95rem, 24px);
+        color: #FFD700;
+    }
+
+    .about-me-card p {
+        margin: 0;
+        font-size: clamp(7px, .75rem, 24px);
+        color: white;
     }
 
     .where-from h2,
@@ -308,12 +340,6 @@
         overscroll-behavior: contain;
         height: 700px;
         max-height: 60vh;
-    }
-
-    .about-me-topics {
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        transform: translateZ(0);
     }
 
 }
