@@ -24,8 +24,10 @@ main {
 .cube-container {
     position: fixed;
     /* Change from relative to fixed */
-    width: 56vh;
-    height: 56vh;
+    --size: 56vh;
+    --half: calc(var(--size) / 2);
+    width: var(--size);
+    height: var(--size);
     perspective: 1000px;
     top: 50%;
     /* Add this */
@@ -76,31 +78,31 @@ main {
 }
 
 .cube .front {
-    transform: rotateY(0deg) translateZ(28vh);
+    transform: rotateY(0deg) translateZ(var(--half));
 }
 
 .cube .back {
-    transform: rotateY(180deg) translateZ(28vh);
+    transform: rotateY(180deg) translateZ(var(--half));
 }
 
 .cube .right-cube {
-    transform: rotateY(90deg) translateZ(28vh);
+    transform: rotateY(90deg) translateZ(var(--half));
 }
 
 .cube .left-cube {
-    transform: rotateY(-90deg) translateZ(28vh);
+    transform: rotateY(-90deg) translateZ(var(--half));
 }
 
 .cube .top {
-    transform: rotateX(90deg) translateZ(28vh);
+    transform: rotateX(90deg) translateZ(var(--half));
 }
 
 .cube .bottom {
-    transform: rotateX(-90deg) translateZ(28vh);
+    transform: rotateX(-90deg) translateZ(var(--half));
 }
 
 .cube .back-cube {
-    transform: rotateY(-180deg) translateZ(28vh);
+    transform: rotateY(-180deg) translateZ(var(--half));
 }
 
 /* Controls */
@@ -142,49 +144,12 @@ main {
 
 @media (max-width: 768px) {
     .cube-container {
-        width: 72vw;
-        height: 72vw;
+        --size: 72vw;
         perspective: 800px;
     }
 
-    /* Update cube size for mobile */
-    .cube {
-        transform: translateZ(-45vw);
-    }
-
-    /* Update individual face transforms */
-    .cube .front {
-        transform: rotateY(0deg) translateZ(40vw);
-    }
-
-    .cube .back-cube {
-        transform: rotateY(180deg) translateZ(40vw);
-    }
-
-    .cube .right-cube {
-        transform: rotateY(90deg) translateZ(40vw);
-    }
-
-    .cube .left-cube {
-        transform: rotateY(-90deg) translateZ(40vw);
-    }
-
-    .cube .top {
-        transform: rotateX(90deg) translateZ(40vw);
-    }
-
-    .cube .bottom {
-        transform: rotateX(-90deg) translateZ(40vw);
-    }
-
-    /* Remove the combined transform that was causing overlap */
-    .cube .front,
-    .cube .back,
-    .cube .right-cube,
-    .cube .left-cube,
-    .cube .top,
-    .cube .back-cube,
-    .cube .bottom {
+    /* Faces pick up --half from the container, so they always meet at the edges */
+    .cube .face {
         padding: 10px;
     }
 
