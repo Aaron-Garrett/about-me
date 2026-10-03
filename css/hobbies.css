@@ -236,7 +236,8 @@
     .writing-explanation p,
     .reading-explanation p,
     .scuba-explanation p {
-        font-size: clamp(7px, .5rem, 24px);
+        font-size: clamp(14px, 4vw, 17px);
+        line-height: 1.45;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         transform: translateZ(0);
@@ -248,7 +249,8 @@
     .writing-explanation h2,
     .reading-explanation h2,
     .scuba-explanation h2 {
-        font-size: clamp(9px, .75rem, 24px);
+        font-size: clamp(18px, 5.5vw, 24px);
+        line-height: 1.2;
     }
 
 
