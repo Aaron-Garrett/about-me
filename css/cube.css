@@ -62,6 +62,25 @@ main {
     transition: transform 0.8s ease-in-out;
 }
 
+/* Resting state: only the current face is rendered, flat (see settleCube in cube-move.js) */
+.cube-container.snap .cube {
+    transition: none;
+}
+
+.cube-container.settled .cube {
+    transition: none;
+    transform: none !important;
+    transform-style: flat;
+}
+
+.cube-container.settled .cube .face:not(.is-current) {
+    display: none;
+}
+
+.cube-container.settled .cube .face.is-current {
+    transform: scale(var(--settle-scale, 1));
+}
+
 /* Faces of the cube */
 .cube .face {
     position: absolute;

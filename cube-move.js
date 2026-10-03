@@ -165,8 +165,52 @@ function resetCube() {
     updateCubeRotation();
 }
 
+/* ---------- Settling: flatten the cube while it's at rest ----------
+   Touch scrolling inside preserve-3d layers is unreliable on mobile, so once a rotation
+   finishes we render only the current face as a plain 2D element (scaled to match how big
+   it looked in 3D). Before the next rotation we put the 3D transforms back. */
+const ROTATION_MS = 800;
+let settleTimer = null;
+
+function settleCube() {
+    const container = document.querySelector('.cube-container');
+    const face = currentFaceElement();
+    if (!container || !face) return;
+    const perspective = parseFloat(getComputedStyle(container).perspective) || 1000;
+    const half = container.offsetWidth / 2;
+    container.style.setProperty('--settle-scale', perspective / (perspective - half));
+    face.classList.add('is-current');
+    container.classList.add('settled');
+}
+
+function unsettleCube() {
+    const container = document.querySelector('.cube-container');
+    const cube = document.getElementById('cube');
+    if (!container || !container.classList.contains('settled')) return;
+    // Restore the 3D state without animating, so the next rotation starts from where we are.
+    container.classList.add('snap');
+    container.classList.remove('settled');
+    document.querySelectorAll('.cube .face.is-current').forEach(f => f.classList.remove('is-current'));
+    void cube.offsetWidth;
+    container.classList.remove('snap');
+    void cube.offsetWidth;
+}
+
+function currentFaceElement() {
+    const face = getCurrentFace();
+    return face ? document.querySelector(`.cube .${face}`) : null;
+}
+
+window.addEventListener('resize', () => {
+    const container = document.querySelector('.cube-container');
+    if (container && container.classList.contains('settled')) settleCube();
+});
+
 function updateCubeRotation() {
     const cube = document.getElementById('cube');
+    unsettleCube();
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(settleCube, ROTATION_MS + 50);
     cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
 
     // Disable pointer-events for all faces
