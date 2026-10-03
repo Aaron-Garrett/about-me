@@ -223,7 +223,8 @@
     .growth-explanation p,
     .wrong-explanation p,
     .lotr-explanation p {
-        font-size: clamp(7px, .5rem, 24px);
+        font-size: clamp(14px, 4vw, 17px);
+        line-height: 1.45;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         transform: translateZ(0);
@@ -237,7 +238,8 @@
     .growth-explanation h2,
     .wrong-explanation h2,
     .lotr-explanation h2 {
-        font-size: clamp(9px, .75rem, 24px);
+        font-size: clamp(18px, 5.5vw, 24px);
+        line-height: 1.2;
     }
 
 }

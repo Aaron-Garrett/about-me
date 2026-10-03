@@ -328,13 +328,15 @@
     .where-from h2,
     .passions h2,
     .goals h2 {
-        font-size: clamp(9px, .75rem, 24px);
+        font-size: clamp(18px, 5.5vw, 24px);
+        line-height: 1.2;
     }
 
     .where-from p,
     .passions p,
     .goals p {
-        font-size: clamp(7px, .5rem, 24px);
+        font-size: clamp(14px, 4vw, 17px);
+        line-height: 1.45;
         -webkit-overflow-scrolling: touch;
         transform: translateZ(0);
         overflow-y: auto;
