@@ -143,10 +143,13 @@
 
 @media (max-width: 768px) {
 
-    .book-list {
+    .book-list,
+    .right-cube .book-list {
         height: 96%;
         display: block;
         position: relative;
+        /* The carousel below is the only scroller on this face */
+        overflow: hidden;
     }
 
     .book-grid {
@@ -154,17 +157,21 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        transform: translateZ(0);
+        overscroll-behavior-x: contain;
         align-items: center;
         justify-content: flex-start;
         scroll-snap-type: x mandatory;
+        width: 100%;
         height: 100%;
+        box-sizing: border-box;
         overflow-y: hidden;
         padding: 0;
         margin: 0;
     }
 
     .book-img {
+        /* Don't let flexbox shrink the books to fit - they should overflow and scroll */
+        flex: 0 0 85%;
         min-width: 85%;
         height: 100%;
         position: relative;

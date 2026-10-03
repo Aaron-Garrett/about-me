@@ -175,20 +175,48 @@
         min-width: 30px;
     }
 
-    .bachelors-card,
-    .masters-card {
-        width: 80%;
-        height: 80%;
+    /* Sideways carousel of cards: the overlay scrolls horizontally, each card scrolls its own text */
+    .bachelors,
+    .masters {
         overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
     }
 
+    .bachelors-card,
+    .masters-card {
+        flex: 0 0 85%;
+        min-width: 0;
+        width: auto;
+        height: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        scroll-snap-align: center;
+    }
+
+    .bachelors-card h2,
+    .masters-card h2 {
+        flex: none;
+        line-height: 1.2;
+        margin: 1.5rem 0 .5rem;
+        max-width: 80%;
+    }
+
+    /* The text fills whatever room is left under the heading and scrolls if it's longer */
     .bachelors-card p,
     .masters-card p {
-        width: 85%;
-        font-size: clamp(7px, .5rem, 24px);
+        flex: 1 1 auto;
+        min-height: 0;
+        height: auto;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        line-height: 1.4;
+        font-size: clamp(12px, 3.6vw, 16px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        transform: translateZ(0);
+        overscroll-behavior: contain;
     }
 
 }
